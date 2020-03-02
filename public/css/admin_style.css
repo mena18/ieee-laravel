@@ -1,0 +1,13 @@
+td img {
+	width: 100px;
+}
+table td img{
+	width:100px;
+	height: 100px;
+}
+.green{
+	color:#008d4c;
+}
+.red{
+	color:#dd4b39;
+}

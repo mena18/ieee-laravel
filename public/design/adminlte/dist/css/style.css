@@ -1,0 +1,19 @@
+.mainBlogImg{
+    max-width: 500px;
+    width: 100%;
+}
+.blogImg{
+    max-width: 250px;
+    max-height: 200px;
+    width: 90%;
+    height: 100%;
+}
+.memberIcons{
+    margin-right: 10px;
+    color: #333;
+}
+@media (min-width: 991px) {
+    .blogImages{
+        max-width: 50%;
+    }
+}
