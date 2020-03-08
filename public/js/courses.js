@@ -21,7 +21,7 @@ $("form").submit(function(e) {
         $(".warning").addClass('hide');
         if ($("body").width() > 480) {
             $('.offlineCourses').css('margin-top','0');
-            window.open("courses/certificate/" + str, "_blank", "width=792,height=596,scrollbars=no,resizable=no,status=no,titlebar=no,toolbar=no,menubar=no,location=no", "false")
+            window.open("courses/certificate/" + str, "_blank", "width=900,height=660,scrollbars=no,resizable=no,status=no,titlebar=no,toolbar=no,menubar=no,location=no", "false")
         } else if ($("body").width() < 480) {
             window.open("courses/certificate/" + str, "_blank", "width=413,height=320,scrollbars=no,resizable=no,status=no,titlebar=no,toolbar=no,menubar=no,location=no", "false")
         }

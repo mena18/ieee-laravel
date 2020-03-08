@@ -5569,13 +5569,14 @@ um-register {
 }
 
 .certification {
-    background-image: url(../images/Certificate.png);
+    background-image: url(../images/certificate.jpg);
     background-repeat: no-repeat;
     padding: 0;
     margin: 0;
     border: none;
-    height: 566px;
-    width: 791px;
+    width:900px;
+    height:635px;
+    background-size: 100% 100%;
     position: relative;
     color: #39231c
 }
