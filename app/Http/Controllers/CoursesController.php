@@ -5,8 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Certificates;
 use App\Courses;
-class CoursesController extends Controller
-{
+class CoursesController extends Controller{
 
 
 	/**
@@ -14,8 +13,7 @@ class CoursesController extends Controller
 	 *
 	 * @return \Illuminate\Http\Response
 	 */
-	public function index()
-	{
+	public function index(){
 		//
 		return view('courses.index');
 	}

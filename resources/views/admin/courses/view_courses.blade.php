@@ -24,6 +24,7 @@
 					<th scope="col">Attendees</th>
 					<th scope="col">Status</th>
 					<th scope="col">type</th>
+					<th scope="col">code</th>
 					<th scope="col">Description</th>
 					@if(Auth::user()->admin == 1 || Auth::user()->admin == 2)
 						<th scope="col"></th>
@@ -43,6 +44,7 @@
 						<td>{{count($course->certificates)}}</td>
 						<td class="{{$course->open=='1'?'green':'red'}}">{{$course->open=='1'?"Open":"Done"}}</td>
 						<td>{{$course->type}}</td>
+						<td>{{$course->code}}</td>
 						<td>{{preg_replace("(\<.*?\>)", " ", substr($course->description, 0, 60))}}...</td>
 						@if(Auth::user()->admin == 1 || Auth::user()->admin == 2)
 							<td><a class="btn btn-primary" href="{{route('course.edit',$course->id)}}"><i class="fa fa-edit"></i> Edit</a></td>
@@ -82,4 +84,3 @@
 
 
 @endsection
-

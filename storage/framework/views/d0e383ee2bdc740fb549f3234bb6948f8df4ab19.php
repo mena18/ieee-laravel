@@ -16,13 +16,24 @@
 	<p class="courseName"><?php echo e($certificate->course()->get()->first()->name); ?></p>
 	<p class="hoursOfCourse"><?php echo e($certificate->attendance); ?></p>
 	<p class="serial"><?php echo e($certificate->serial); ?></p>
-	<img src="<?php echo e(URL::to("images/signature.png")); ?> alt="counselor signature" class="signature">
+	<!-- <img src="<?php echo e(URL::to('images/signature.png')); ?>" alt="counselor signature" class="signature"> -->
 </section>
-<a href="<?php echo e($certificate->link); ?>">
-	<div class="btn btn-primary">Show in High Quality</div>
+<a id="certificate" download>
+	<div class="btn btn-primary">Download</div>
 </a>
 <script src="<?php echo e(URL::to('js/jquery-3.2.0.min.js')); ?>"></script>
 <script src="<?php echo e(URL::to('js/bootstrap.min.js')); ?>"></script>
 <script src="<?php echo e(URL::to('js/certificate.js')); ?>"></script>
+<script src="<?php echo e(URL::to('js/html2canvas.js')); ?>"></script>
+<script>
+window.onload = function(){
+	html2canvas(document.querySelector(".certification")).then(canvas => {
+		var img    = canvas.toDataURL("image/png");
+		var a = document.getElementById('certificate')
+		a.href = img;
+		//document.write('<img src="'+img+'"/>');
+	});
+}
+</script>
 </body>
 </html>

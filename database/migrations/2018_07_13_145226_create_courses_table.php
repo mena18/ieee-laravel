@@ -16,9 +16,10 @@ class CreateCoursesTable extends Migration
         Schema::create('courses', function (Blueprint $table) {
 	        $table->increments('id');
 	        $table->string('name');
-            $table->string('type')->default("mid_year");//mid year course  or summer course
-            $table->integer('open')->default(0);
-            $table->longText('description')->nullable();
+          $table->string('type')->default("mid_year");//mid year course  or summer course
+          $table->string('code');//mid year course  or summer course
+          $table->integer('open')->default(0);
+          $table->longText('description')->nullable();
 	        $table->integer('hours');
 	        $table->timestamps();
         });

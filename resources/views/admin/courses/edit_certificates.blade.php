@@ -20,10 +20,6 @@
 		<input class="form-control" type="text" name="serial" id='serial' value="{{$certificate->serial}}" placeholder="Serial">
 	</div>
 
-	<div class="form-group">
-		<label class="control-label" for="link">High Quality link : </label>
-		<input class="form-control" type="text" name="link" id='link' value="{{$certificate->link}}" placeholder="Link">
-	</div>
 
 	<div class="form-group">
 		<label class="control-label" for="course"> Course : </label>
@@ -33,7 +29,7 @@
 				<option value="{{$course->id}}"@if($certificate->course_id==$course->id) Selected @endif >
 				{{$course->name}}
 				</option>
-				
+
 			@endforeach
 		</select>
 	</div>

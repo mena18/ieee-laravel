@@ -16,13 +16,24 @@
 	<p class="courseName">{{$certificate->course()->get()->first()->name}}</p>
 	<p class="hoursOfCourse">{{$certificate->attendance}}</p>
 	<p class="serial">{{$certificate->serial}}</p>
-	<img src="{{URL::to("images/signature.png")}} alt="counselor signature" class="signature">
+	<!-- <img src="{{URL::to('images/signature.png')}}" alt="counselor signature" class="signature"> -->
 </section>
-<a href="{{$certificate->link}}">
-	<div class="btn btn-primary">Show in High Quality</div>
+<a id="certificate" download>
+	<div class="btn btn-primary">Download</div>
 </a>
 <script src="{{URL::to('js/jquery-3.2.0.min.js')}}"></script>
 <script src="{{URL::to('js/bootstrap.min.js')}}"></script>
 <script src="{{URL::to('js/certificate.js')}}"></script>
+<script src="{{URL::to('js/html2canvas.js')}}"></script>
+<script>
+window.onload = function(){
+	html2canvas(document.querySelector(".certification")).then(canvas => {
+		var img    = canvas.toDataURL("image/png");
+		var a = document.getElementById('certificate')
+		a.href = img;
+		//document.write('<img src="'+img+'"/>');
+	});
+}
+</script>
 </body>
 </html>

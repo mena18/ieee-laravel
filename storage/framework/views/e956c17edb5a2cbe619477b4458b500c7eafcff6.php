@@ -22,6 +22,7 @@
 					<th scope="col">Attendees</th>
 					<th scope="col">Status</th>
 					<th scope="col">type</th>
+					<th scope="col">code</th>
 					<th scope="col">Description</th>
 					<?php if(Auth::user()->admin == 1 || Auth::user()->admin == 2): ?>
 						<th scope="col"></th>
@@ -41,6 +42,7 @@
 						<td><?php echo e(count($course->certificates)); ?></td>
 						<td class="<?php echo e($course->open=='1'?'green':'red'); ?>"><?php echo e($course->open=='1'?"Open":"Done"); ?></td>
 						<td><?php echo e($course->type); ?></td>
+						<td><?php echo e($course->code); ?></td>
 						<td><?php echo e(preg_replace("(\<.*?\>)", " ", substr($course->description, 0, 60))); ?>...</td>
 						<?php if(Auth::user()->admin == 1 || Auth::user()->admin == 2): ?>
 							<td><a class="btn btn-primary" href="<?php echo e(route('course.edit',$course->id)); ?>"><i class="fa fa-edit"></i> Edit</a></td>
@@ -80,6 +82,5 @@
 
 
 <?php $__env->stopSection(); ?>
-
 
 <?php echo $__env->make('admin.index', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

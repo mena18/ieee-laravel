@@ -21,6 +21,11 @@
 	</div>
 
 	<div class="form-group">
+		<label class="control-label" for="code">Code : </label>
+		<input class="form-control" type="text" name="code" id='code' value="{{$course->code}}" placeholder="AA">
+	</div>
+
+	<div class="form-group">
 		<label class="control-label" for="type">Type : </label>
 		<select id="type" class="form-control" name="type">
 			<option @if( $course['type'] =='mid_year') selected @endif value="mid_year">Mid Year Course</option>
@@ -47,4 +52,3 @@
 <br><br>
 
 @endsection
-

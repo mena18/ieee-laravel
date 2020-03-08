@@ -12,12 +12,12 @@ class UsersDB extends Seeder
      */
     public function run()
     {
-    	
+
     	User::create([
     		'name' => 'Board',
     		'username' => 'board',
     		'email' => 'board@board.com',
-    		'password' => bcrypt('/lB$(V!8);x%(%u'),
+    		'password' => bcrypt('Nifk#u@PZ(E7Oje'),
     		'admin' => 1
     	]);
 
@@ -25,7 +25,7 @@ class UsersDB extends Seeder
     		'name' => 'Media',
     		'username' => 'media',
     		'email' => 'media@media.com',
-    		'password' => bcrypt('0McgS>nhruRcX/e'),
+    		'password' => bcrypt('aMw)idUN(WxDqCY'),
     		'admin' => 2
     	]);
 
@@ -33,9 +33,9 @@ class UsersDB extends Seeder
     		'name' => 'Registeration',
     		'username' => 'registeration',
     		'email' => 'reg@registeration.com',
-    		'password' => bcrypt('ju{ix@MlM7Nhquh'),
+    		'password' => bcrypt('dcL87v9hC#(%Hk!'),
     		'admin' => 3
     	]);
-        
+
     }
 }

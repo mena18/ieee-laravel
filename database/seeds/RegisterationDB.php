@@ -1224,7 +1224,9 @@ class RegisterationDB extends Seeder
                 ["1218","Roaya ","roayamohammed0605@gmail.com","1204150886","29905060200426","Pharos university ","Undergraduate","Non-Member","0","P469","1999-06-05","11"]
             ];
         //
-	    foreach ($reg as $item) {
+	    // foreach ($reg as $item) {
+      for($i=0;$i<50;$i++){
+        $item = $reg[$i];
 	    	$registeration = new Registeration();
 		    $registeration->name = $item[1];
 		    $registeration->email = $item[2];
@@ -1239,6 +1241,6 @@ class RegisterationDB extends Seeder
 		    $registeration->event_id = $item[11];
 		    $registeration->save();
 	    }
-	    
+
     }
 }

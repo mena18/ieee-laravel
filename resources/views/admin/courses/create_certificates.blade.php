@@ -16,16 +16,6 @@
 	</div>
 
 	<div class="form-group">
-		<label class="control-label" for="serial">Serial : </label>
-		<input class="form-control" type="text" name="serial" id='serial' value="{{old('serial')}}" placeholder="Serial">
-	</div>
-
-	<div class="form-group">
-		<label class="control-label" for="link">High Quality link : </label>
-		<input class="form-control" type="text" name="link" id='link' value="{{old('link')}}" placeholder="Link">
-	</div>
-
-	<div class="form-group">
 		<label class="control-label" for="course"> Course : </label>
 		<select id="course" class="form-control" name="course_id">
 			@foreach($courses as $course)
@@ -38,7 +28,20 @@
 	<input type="submit" class="btn btn-success" id="submit" value="Submit">
 </form>
 
+
+<h1> or upload many certificates </h1>
+<p>file should contains 2 columns (name:the name of the attendee,course:the name of the course)</p>
+<form action="{{route('certificate.upload')}}"  method="post" enctype="multipart/form-data">
+	{{ csrf_field() }}
+
+	<div class="form-group">
+		<label class="control-label" for="file"> File : </label>
+		<input id="file" type="file" name='file' class="form-control-file">
+	</div>
+
+	<input type="submit" class="btn btn-success" value="Upload">
+</form>
+
 <br><br>
 
 @endsection
-

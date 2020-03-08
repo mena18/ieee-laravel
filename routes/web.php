@@ -1,6 +1,6 @@
 <?php
 
-/******************************************** Guest Section *******************************************/ 
+/******************************************** Guest Section *******************************************/
 
 Route::get('/','MainController@index')->name('home');
 
@@ -125,7 +125,7 @@ Route::group(['middleware'=>"auth"], function () {
             Route::post('/store',         'admin_mega@store')->name('mega.store');
             Route::get('/delete/{id?}',   'admin_mega@destroy')->name('mega.delete');
         });
- 
+
     });
 
     Route::prefix('news')->group(function(){
@@ -181,7 +181,7 @@ Route::group(['middleware'=>"auth"], function () {
         /******  Event Attendee ******/
         Route::get('/event','admin_attendee@event')->name('attendee.event');
         Route::get('/event/{id?}','admin_attendee@event')->name('attendee.event_2');
-        
+
         /******  Mega Attendee ******/
         Route::get('/mega','admin_attendee@mega')->name('attendee.mega');
         Route::get('/mega/{id?}','admin_attendee@mega')->name('attendee.mega_2');
@@ -212,6 +212,8 @@ Route::group(['middleware'=>"auth"], function () {
 
             Route::get('/create_certificate','admin_courses@create_certificate')->name('certificate.create');
             Route::post('/store_certificate','admin_courses@store_certificate')->name('certificate.store');
+            Route::post('/upload_certificates','admin_courses@upload_certificates')->name('certificate.upload');
+
             Route::get('/edit_certificate/{id?}','admin_courses@edit_certificate')->name('certificate.edit');
             Route::post('/update_certificate/{id?}','admin_courses@update_certificate')->name('certificate.update');
             Route::get('/delete_certificate/{id?}','admin_courses@delete_certificate')->name('certificate.delete');

@@ -5581,20 +5581,24 @@ um-register {
 }
 
 .certification .attendeeName {
-    font-family: Lovelo-Black;
+    font-family: MYRIADPROREGULAR;
     position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
     top: 260px
 }
 
 .certification .courseName,
 .certification .hoursOfCourse {
-    font-family: "Lane - Narrow";
+    font-family: MYRIADPROREGULAR;
     font-size: 20px;
     position: absolute
 }
 
 .certification .courseName {
     top: 375px;
+    left: 50%;
+    transform: translate(-50%, 0);
     font-weight: 700
 }
 

@@ -226,6 +226,7 @@ class CoursesDB extends Seeder
 		    $course->name=$courses[$i][0];
 		    $course->hours = $courses[$i][1];
 		    $course->description = $courses[$i][2];
+		    $course->code = "";
 		    $course->save();
 	    }
 
