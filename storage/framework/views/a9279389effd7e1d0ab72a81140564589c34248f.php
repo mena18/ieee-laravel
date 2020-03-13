@@ -56,7 +56,7 @@
 								</a>
 							</li>
 							<li class="insta">
-								<a href="https://www.instagram.com/ieeepuasb/" target="_blank">
+								<a href="https://www.instagram.com/ieeepua/" target="_blank">
 									<i class="fa fa-instagram" aria-hidden="true"></i>
 								</a>
 							</li>

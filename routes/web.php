@@ -229,4 +229,7 @@ Route::group(['middleware'=>"auth"], function () {
 
 });
 });
+
+
+Route::fallback('MainController@index');
 /********************************* End of Admin section ******************************************/
