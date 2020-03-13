@@ -7,7 +7,7 @@
 		<div class="col-sm-<?php echo e($i==1?6:3); ?> gallery-item">
 			<span class="gallery-img bg flex" data-featherlight="#content-<?php echo e($i); ?>" style="background-image:url('<?php echo e($image->url); ?>')"></span>
 			<div id="content-<?php echo e($i); ?>" class="gallery-lightbox">
-				<img src="<?php echo e($image->url); ?>" alt="<?php echo e($image->event_id); ?>">
+				<img src="<?php echo e(URL::to($image->url)); ?>" alt="<?php echo e($image->event_id); ?>">
 				<div class="gallery-lightbox-content">
 					<p><?php echo e($image->description); ?>
 

@@ -7,7 +7,7 @@
 		<div class="col-sm-{{$i==1?6:3}} gallery-item">
 			<span class="gallery-img bg flex" data-featherlight="#content-{{$i}}" style="background-image:url('{{$image->url}}')"></span>
 			<div id="content-{{$i}}" class="gallery-lightbox">
-				<img src="{{$image->url}}" alt="{{$image->event_id}}">
+				<img src="{{URL::to($image->url)}}" alt="{{$image->event_id}}">
 				<div class="gallery-lightbox-content">
 					<p>{{$image->description}}
 						<br>

@@ -50,7 +50,7 @@
     @endif
     <section class="we-have-faith">
         <div class="section-header col-sm-6 pull-left wow animated bounceInLeft">
-            <h3 class="icon"><img src="images/mission-icon.png" alt="Mission Icon" title="Mission Icon" height="100"
+            <h3 class="icon"><img src="{{URL::to('images/mission-icon.png')}}" alt="Mission Icon" title="Mission Icon" height="100"
                                   width="100"></h3>
             <h3>mission</h3>
             <p>
@@ -125,7 +125,7 @@
                     <ul class="nav">
                         <li>
                             <a href="#testimonial-2" data-toggle="tab">
-                                <img src="images/quotes/abdelrahman-nasr.png" alt="image">
+                                <img src="{{URL::to('images/quotes/abdelrahman-nasr.png')}}" alt="image">
                                 <strong>Abdelrahman Nasr El-Din</strong>
                                 <span>Former Chairman</span>
                             </a>
@@ -133,7 +133,7 @@
 
                         <li>
                             <a href="#testimonial-5" data-toggle="tab">
-                                <img src="images/quotes/ahmed-hesham.png" alt="image">
+                                <img src="{{URL::to('images/quotes/ahmed-hesham.png')}}" alt="image">
                                 <strong>Ahmed Hesham</strong>
                                 <span>Co-founder</span>
                             </a>
@@ -141,7 +141,7 @@
 
                         <li class="active">
                             <a href="#testimonial-1" data-toggle="tab">
-                                <img src="images/quotes/karim-soliman.jpg" alt="image">
+                                <img src="{{URL::to('images/quotes/karim-soliman.jpg')}}" alt="image">
                                 <strong>Karim Soliman</strong>
                                 <span>Counselor of IEEE PUA SB</span>
                             </a>
@@ -149,14 +149,14 @@
 
                         <li>
                             <a href="#testimonial-4" data-toggle="tab">
-                                <img src="images/quotes/osama-abulkhair.jpg" alt="image">
+                                <img src="{{URL::to('images/quotes/osama-abulkhair.jpg')}}" alt="image">
                                 <strong>Osama Abulkhair</strong>
                                 <span>Counselor of IEEE PUA SB</span>
                             </a>
                         </li>
                         <li>
                             <a href="#testimonial-3" data-toggle="tab">
-                                <img src="images/quotes/abdelrahman-geddawi.png" alt="image">
+                                <img src="{{URL::to('images/quotes/abdelrahman-geddawi.png')}}" alt="image">
                                 <strong>Abdelrahman El-Gedawi</strong>
                                 <span>Former Chairman</span>
                             </a>
@@ -167,4 +167,3 @@
         </div>
     </section>
 @endsection
-
