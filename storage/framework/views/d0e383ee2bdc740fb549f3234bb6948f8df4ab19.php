@@ -53,8 +53,8 @@
 <body>
 <section class="certification col-xs-12">
 	<div class="attendeeName"><p ><?php echo e($certificate->name); ?></p></div>
-	<p class="courseName"><?php echo e($certificate->course()->get()->first()->name); ?></p>
-	<p class="hoursOfCourse"><?php echo e($certificate->attendance); ?></p>
+	<p class="courseName"><?php echo e($certificate->course->name); ?></p>
+	<p class="hoursOfCourse"><?php echo e($certificate->course->hours); ?></p>
 	<!-- <img src="<?php echo e(URL::to('images/signature.png')); ?>" alt="counselor signature" class="signature"> -->
 </section>
 <a id="certificate" download>

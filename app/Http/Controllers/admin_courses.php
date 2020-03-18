@@ -18,8 +18,7 @@ function random_string(){
 }
 
 
-class admin_courses extends Controller
-{
+class admin_courses extends Controller{
     /******************    Certification   ********************************/
     public function certificate_home()
     {
@@ -34,6 +33,7 @@ class admin_courses extends Controller
     public function store_certificate(Request $request){
     	$this->validate($request, [
             'name'=>'required',
+            'email'=>'',
             // 'serial'=>'required|max:8|min:8|unique:certificates',
             // 'link'=>'required',
             'course_id'=>'required',
@@ -41,6 +41,7 @@ class admin_courses extends Controller
         $course = Courses::find($request['course_id']);
         $certificate = new Certificates();
         $certificate->name = $request['name'];
+        $certificate->email = $request['email'];
         $cont=1;
         while($cont){
             $certificate->serial = $course->code.random_string();
@@ -80,9 +81,10 @@ class admin_courses extends Controller
     {
         $this->validate($request, [
             'name'=>'required',
-            'serial'=>'required|max:8|min:8|unique:certificates',
+            'serial'=>'required|max:8|min:8',
             'course_id'=>'required',
-            'link'=>'required',
+            'link'=>'',
+            'email'=>'',
         ]);
         $course = Courses::find($request['course_id']);
         $certificate = Certificates::find($id);
@@ -92,8 +94,9 @@ class admin_courses extends Controller
         $certificate->name         = $request['name'];
         $certificate->serial       = $request['serial'];
         $certificate->course_id    = $request['course_id'];
-        $certificate->link         = $request['link'];
+        if($request['link']){$certificate->link  = $request['link'];}
         $certificate->attendance   = $course['hours'];
+        $certificate->email   = $request['email'] ? $request['email'] : "";
         $update = $certificate->update();
         if($update){
             return redirect()->back()->with('success', "Updated Successfuly");
@@ -132,13 +135,15 @@ class admin_courses extends Controller
             "name"=>"required",
             "hours"=>"required",
             "type"=>"required",
-            "code"=>"required"
+            "code"=>"required",
+            "year"=>"required",
         ]);
         $course = new Courses();
         $course->name   = $request['name'];
         $course->hours   = $request['hours'];
         $course->description   = $request['description'];
         $course->code   = $request['code'];
+        $course->year   = $request['year'];
         $course->open = 1;
         $course->type = $request['type'];
         $save = $course->save();
@@ -164,7 +169,8 @@ class admin_courses extends Controller
             "hours"=>"required",
             "type"=>"required",
             "open"=>"required",
-            "code"=>"required"
+            "code"=>"required",
+            "year"=>"required"
         ]);
         $course = Courses::find($id);
         if(is_null($course)){
@@ -175,6 +181,7 @@ class admin_courses extends Controller
         $course->description   = $request['description'];
         $course->open = $request['open'];
         $course->type = $request['type'];
+        $course->year = $request['year'];
         $course->code = $request['code'];
         $update = $course->update();
         if($update){

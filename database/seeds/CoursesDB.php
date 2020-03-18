@@ -44,7 +44,7 @@ class CoursesDB extends Seeder
 												- Duration:<br>
 												========<br>
 												10 Sessions / 3 hours each<br>
-											</p>"],
+											</p>","",2018],
 					['Mechanical AutoCAD', 21,"<p>
 												AutoCAD is a 2-D and 3-D computer-aided drafting software application used in architecture, construction, and manufacturing to assist in the preparation of blueprints and other engineering plans.<br><br>
 
@@ -81,7 +81,7 @@ class CoursesDB extends Seeder
 												- Duration:<br>
 												========<br>
 												7 Sessions / 3 hours each<br>
-											</p>"],
+											</p>","",2018],
 					['SOLIDWORKS', 24,"<p>
 												It is one of the most popular CAD modelings recently where every company around the world make sure their engineers can model with it efficiently.<br><br>
 
@@ -127,8 +127,8 @@ class CoursesDB extends Seeder
 												Duration:<br>
 												=======<br>
 												9 Sessions / 3 hours each.<br>
-											</p>"],
-					['Architectural AutoCAD', 24,""],
+											</p>","",2018],
+					['Architectural AutoCAD', 24,"","",2018],
 					['PCB', 12,"<p>
 												A printed circuit board (PCB) is a plastic board made for connecting electronic components together. These are used in almost all computers and electronics today.<br><br>
 
@@ -186,8 +186,8 @@ class CoursesDB extends Seeder
 												Duration:<br>
 												=======<br>
 												4 Sessions / 3 hours each.<br>
-											</p>"],
-					['ARDUINO', 21,""],
+											</p>","",2018],
+					['ARDUINO', 21,"","",2018],
 					['Basics of Photography', 15,"<p>
 												the art or process of capturing images, either on light-sensitive film or electronically in digital form, from which viewable pictures can be produced; the activity of someone who uses a camera<br><br>
 
@@ -219,16 +219,24 @@ class CoursesDB extends Seeder
 												- Duration:<br>
 												========<br>
 												5 Sessions / 3 hours each<br>
-											</p>"]
+											</p>","",2018],
+                      ['Embedded Systems', 35,"","E",2020],
+                      ['Arduino Programming', 15,"","A2",2020],
+                      ['Web Development', 18,"","W",2020],
+                      ['Social Media Marketing', 20,"","S",2020],
+                      ['3D MAX', 32,"","D2",2020],
+                      ['Graphic Design', 20,"","G",2020],
 	    ];
-	    for($i = 0; $i < 7; $i++) {
-		    $course = new Courses();
-		    $course->name=$courses[$i][0];
-		    $course->hours = $courses[$i][1];
-		    $course->description = $courses[$i][2];
-		    $course->code = "";
+      foreach ($courses as $cur) {
+        $course = new Courses();
+        $course->name=$cur[0];
+		    $course->hours = $cur[1];
+		    $course->description = $cur[2];
+		    $course->code = $cur[3];
+		    $course->year = $cur[4];
 		    $course->save();
-	    }
+      }
+
 
     }
 }

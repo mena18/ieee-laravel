@@ -20,56 +20,52 @@
 				</div>
 				<div class="schedule-table-content">
 					<ul>
-						<li>week 4<span class="sec-dates">06/03/2018</span></li>
+						<li>week 4<span class="sec-dates">10/03/2020</span></li>
 						<li class="psychology"><span>12:30pm-2:30pm <strong>ACM Seminar</strong></span></li>
 						<li class="psychology"><span>12:30pm-2:30pm <strong>ACM Seminar</strong></span></li>
-						<li class="design"><span>12:30pm-2:30pm <strong>Fund Rasing</strong></span></li>
-						<li class="psychology"><span>12:30pm-2:30pm <strong>ACM Seminar</strong></span></li>
-						<li class="psychology"><span>12:30pm-2:30pm <strong>ACM Seminar</strong></span></li>
-					</ul>
-					<ul>
-						<li>week 5<span class="sec-dates">13/03/2018</span></li>
-						<li class="psychology"><span>12:30pm-2:30pm <strong>ACM Seminar</strong></span></li>
-						<li class="psychology"><span>12:30pm-2:30pm <strong>ACM Seminar</strong></span></li>
-						<li class="design"><span>12:30pm-2:30pm <strong>Radio 101.1</strong></span></li>
+						<li class="design"><span style="font-size:10px;">12:30pm-2:30pm <strong>Recruitment 2020</strong></span></li>
 						<li class="psychology"><span>12:30pm-2:30pm <strong>ACM Seminar</strong></span></li>
 						<li class="psychology"><span>12:30pm-2:30pm <strong>ACM Seminar</strong></span></li>
 					</ul>
 					<ul>
-						<li>week 6<span class="sec-dates">20/03/2018</span></li>
-						<li class="psychology"><span>12:30pm-2:30pm <strong>ACM Seminar</strong></span></li>
-						<li class="psychology"><span>12:30pm-2:30pm <strong>ACM Seminar</strong></span></li>
-						<li class="design"><span style="font-size:11px">12:30pm-2:30pm<strong>Career Debate V2</strong></span></li>
-						<li class="psychology"><span>12:30pm-2:30pm <strong>ACM Seminar</strong></span></li>
-						<li class="psychology"><span>12:30pm-2:30pm <strong>ACM Seminar</strong></span></li>
-					</ul>
-					<ul>
-						<li>week 7<span class="sec-dates">27/03/2018</span></li>
+						<li>week 5<span class="sec-dates">17/03/2020</span></li>
 						<li class="day-5 break"><span><strong>Break</strong></span></li>
 					</ul>
 					<ul>
-						<li>week 8<span class="sec-dates">03/04/2018</span></li>
+						<li>week 6<span class="sec-dates">24/03/2020</span></li>
 						<li class="day-5 break"><span><strong>Break</strong></span></li>
 					</ul>
 					<ul>
-						<li>week 9<span class="sec-dates">10/04/2018</span></li>
+						<li>week 7<span class="sec-dates">31/03/2020</span></li>
 						<li class="day-5 break"><span><strong>Break</strong></span></li>
 					</ul>
 					<ul>
-						<li>week 10<span class="sec-dates">17/04/2018</span></li>
+						<li>week 8<span class="sec-dates">7/04/2020</span></li>
+						<li class="day-5 break"><span><strong>Break</strong></span></li>
+					</ul>
+					<ul>
+						<li>week 9<span class="sec-dates">14/04/2020</span></li>
+						<li class="day-5 break"><span><strong>Break</strong></span></li>
+					</ul>
+					<ul>
+						<li>week 10<span class="sec-dates">21/04/2020</span></li>
 						<li class="psychology"><span>12:30pm-2:30pm <strong>ACM Seminar</strong></span></li>
 						<li class="psychology"><span>12:30pm-2:30pm <strong>ACM Seminar</strong></span></li>
-						<li class="design"><span style="font-size:10px;">12:30pm-2:30pm <strong>Human Development</strong></span></li>
+						<li class="design"><span style="font-size:10px;">12:30pm-2:30pm <strong>Skills from Google</strong></span></li>
 						<li class="psychology"><span>12:30pm-2:30pm <strong>ACM Seminar</strong></span></li>
 						<li class="psychology"><span>12:30pm-2:30pm <strong>ACM Seminar</strong></span></li>
 					</ul>
 					<ul>
-						<li>week 11<span class="sec-dates">24/04/2018</span></li>
+						<li>week 11<span class="sec-dates">27/04/2020</span></li>
 						<li class="day-5 break"><span><strong>Break</strong></span></li>
 					</ul>
 					<ul>
-						<li>week 12<span class="sec-dates">01/05/2018</span></li>
+						<li>week 12<span class="sec-dates">04/05/2020</span></li>
 						<li class="day-5 break"><span><strong>Break</strong></span></li>
+					</ul>
+					<ul>
+						<li>Summer<span class="sec-dates" style="font-size:7px;">23-24 / 07</span></li>
+						<li class="day-5 design"><span style="text-align:center;"><strong>Mega Event</strong></span></li>
 					</ul>
 					<!--<ul>
 							<li>week 13</li>

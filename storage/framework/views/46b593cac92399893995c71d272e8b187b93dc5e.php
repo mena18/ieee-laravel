@@ -49,6 +49,7 @@
 						<li class="dropdown">
 							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">About Us<span class="caret"></span></a>
 							<ul class="dropdown-menu">
+								<li class="<?php echo e($active==='about'?'active':''); ?>"><a href="<?php echo e(route('about.index')); ?>">How Are We?</a></li>
 								<li class="<?php echo e($active==='contact'?'active':''); ?>"><a href="<?php echo e(route('about.contact')); ?>">Contact</a></li>
 								<li class="<?php echo e($active==='committee'?'active':''); ?>"><a href="<?php echo e(route('about.committees')); ?>">Committees</a></li>
 								<li class="<?php echo e($active==='benefits'?'active':''); ?>"><a href="<?php echo e(route('about.benefits')); ?>">IEEE Benefits</a></li>

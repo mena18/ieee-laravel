@@ -56,7 +56,7 @@ Route::prefix('about')->group(function ()
 {
 	Route::get('/', 'AboutController@index')->name('about.index');
 	Route::get('/contact', 'AboutController@contact')->name('about.contact');
-    Route::post('/contact', 'MessagesController@store');
+  Route::post('/contact', 'MessagesController@store');
 	Route::get('/committees', 'AboutController@committees')->name('about.committees');
 	Route::get('/benefits','AboutController@benefits')->name('about.benefits');
 

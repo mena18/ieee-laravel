@@ -17,6 +17,7 @@
 					<th scope="col">#</th>
 					<th scope="col">Name</th>
 					<th scope="col">Serial</th>
+					<th scope="col">email</th>
 					<th scope="col">Link</th>
 					<th scope="col">Course</th>
 					<th scope="col">Receiving Time</th>
@@ -33,6 +34,7 @@
 						<td><?php echo e($counter); ?></td><?php $counter++; ?></td>
 						<td><?php echo e($cer->name); ?></td>
 						<td><?php echo e($cer->serial); ?></td>
+						<td><?php echo e($cer->email); ?></td>
 						<td><?php echo e($cer->link); ?></td>
 						<td><?php echo e($cer->course['name']); ?></td>
 						<td><?php echo e($cer->created_at); ?></td>
@@ -68,4 +70,5 @@
 <?php endif; ?>
 
 <?php $__env->stopSection(); ?>
+
 <?php echo $__env->make('admin.index', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

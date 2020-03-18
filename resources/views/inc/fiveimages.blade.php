@@ -5,7 +5,7 @@
 		@foreach($gallery as $image)
 			<?php $i++;?>
 		<div class="col-sm-{{$i==1?6:3}} gallery-item">
-			<span class="gallery-img bg flex" data-featherlight="#content-{{$i}}" style="background-image:url('{{$image->url}}')"></span>
+			<span class="gallery-img bg flex" data-featherlight="#content-{{$i}}" style="background-image:url('{{URL::to($image->url)}}')"></span>
 			<div id="content-{{$i}}" class="gallery-lightbox">
 				<img src="{{URL::to($image->url)}}" alt="{{$image->event_id}}">
 				<div class="gallery-lightbox-content">

@@ -53,8 +53,8 @@
 <body>
 <section class="certification col-xs-12">
 	<div class="attendeeName"><p >{{$certificate->name}}</p></div>
-	<p class="courseName">{{$certificate->course()->get()->first()->name}}</p>
-	<p class="hoursOfCourse">{{$certificate->attendance}}</p>
+	<p class="courseName">{{$certificate->course->name}}</p>
+	<p class="hoursOfCourse">{{$certificate->course->hours}}</p>
 	<!-- <img src="{{URL::to('images/signature.png')}}" alt="counselor signature" class="signature"> -->
 </section>
 <a id="certificate" download>

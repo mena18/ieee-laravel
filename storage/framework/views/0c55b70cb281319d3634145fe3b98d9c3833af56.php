@@ -28,9 +28,10 @@
 								<?php if(count($summer)>0): ?>
 									<?php $__currentLoopData = $summer; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $course): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
 										<li>
-											<a href="#"><?php echo e($course->name); ?> 
+											<a href="#"><?php echo e($course->name); ?>
+
 												<span>
-													<?php echo e($course->open?"Open":"Done"); ?>
+													<?php echo e($course->open?"Open":"Finished"); ?>
 
 												</span>
 											</a>
@@ -64,23 +65,28 @@
 					<div class="slide-left">
 						<ul class="faq-accordion">
 							<?php if(count($mid_year)>0): ?>
-								<?php $__currentLoopData = $mid_year; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $course): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-									<li>
-										<a href="#"><?php echo e($course->name); ?> 
-											<span>
-												<?php echo e($course->open?"Open":"Done"); ?>
 
-											</span>
-										</a>
-										<ul class="faq-content">
-											<li>
-												<div>
-													<?php echo $course->description; ?>
+								<?php $__currentLoopData = $mid_year; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $year => $year_courses): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+										<h1 class="courses_year_head"><?php echo e($year); ?></h1>
+										<?php $__currentLoopData = $year_courses; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $course): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+										<li>
+											<a href="#"><?php echo e($course->name); ?>
 
-												</div>
-											</li>
-										</ul>
-									</li>
+												<span>
+													<?php echo e($course->open?"Open":"Finished"); ?>
+
+												</span>
+											</a>
+											<ul class="faq-content">
+												<li>
+													<div>
+														<?php echo $course->description; ?>
+
+													</div>
+												</li>
+											</ul>
+										</li>
+									<?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
 								<?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
 
 							<?php else: ?>
@@ -95,4 +101,5 @@
 		</div>
 	</section>
 <?php $__env->stopSection(); ?>
+
 <?php echo $__env->make('layout.body',['headerClass'=>'events-hero','active'=>'offline','script'=>'offlineCourses'], array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

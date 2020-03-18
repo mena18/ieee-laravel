@@ -21,6 +21,16 @@
 	</div>
 
 	<div class="form-group">
+		<label class="control-label" for="code">Code : </label>
+		<input class="form-control" type="text" name="code" id='code' value="{{old('code')}}" placeholder="A">
+	</div>
+
+	<div class="form-group">
+		<label class="control-label" for="year">Year : </label>
+		<input class="form-control" type="number" name="year" id='year' value="{{old('year')}}" placeholder="year">
+	</div>
+
+	<div class="form-group">
 		<label class="control-label" for="type">Type : </label>
 		<select id="type" class="form-control" name="type">
 			<option @if(old('type')=='mid_year') selected @endif value="mid_year">Mid Year Course</option>
@@ -39,4 +49,3 @@
 <br><br>
 
 @endsection
-

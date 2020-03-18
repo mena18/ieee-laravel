@@ -22,6 +22,16 @@
 
 	<div class="form-group">
 		<label class="control-label" for="code">Code : </label>
+		<input class="form-control" type="text" name="code" id='code' value="{{$course->hours}}" placeholder="A">
+	</div>
+
+	<div class="form-group">
+		<label class="control-label" for="year">Year : </label>
+		<input class="form-control" type="number" name="year" id='year' value="{{$course->year}}" placeholder="year">
+	</div>
+
+	<div class="form-group">
+		<label class="control-label" for="code">Code : </label>
 		<input class="form-control" type="text" name="code" id='code' value="{{$course->code}}" placeholder="AA">
 	</div>
 

@@ -37,7 +37,7 @@ class Testimport implements OnEachRow
         }
       }
       else{
-        $course = Courses::where('name',$row2[self::$arr['course']])->get()[0];
+        $course = Courses::where('name',$row2[self::$arr['course']])->where('open',1)->get()[0];
         $certificate = new Certificates();
         $certificate->name = $row2[self::$arr['name']];
         $cont=1;
@@ -46,9 +46,10 @@ class Testimport implements OnEachRow
             $cont = $certificate::where('serial',$certificate->serial)->count();
         }
         $certificate->course_id    = $course->id;
-        $certificate->link         = "";
+        $certificate->email = $row2[self::$arr['email']] ? $row2[self::$arr['email']] : "";
+        $certificate->link         =  "";
         $certificate->attendance   = $course->hours;
-        $certificate->save();
+        $save = $certificate->save();
 
       }
 

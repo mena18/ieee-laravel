@@ -5839,3 +5839,14 @@ um-register {
         transform: translateX(0%);
     }
 }
+
+
+/*
+some changes in offline courses
+*/
+.courses_year_head{
+    color:#286090;
+    margin:30px;
+    text-align:center;
+    font-size:40px;
+}

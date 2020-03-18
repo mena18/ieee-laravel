@@ -19,6 +19,7 @@
 					<th scope="col">#</th>
 					<th scope="col">Name</th>
 					<th scope="col">Serial</th>
+					<th scope="col">email</th>
 					<th scope="col">Link</th>
 					<th scope="col">Course</th>
 					<th scope="col">Receiving Time</th>
@@ -35,6 +36,7 @@
 						<td>{{$counter}}</td><?php $counter++; ?></td>
 						<td>{{$cer->name}}</td>
 						<td>{{$cer->serial}}</td>
+						<td>{{$cer->email}}</td>
 						<td>{{$cer->link}}</td>
 						<td>{{$cer->course['name']}}</td>
 						<td>{{$cer->created_at}}</td>

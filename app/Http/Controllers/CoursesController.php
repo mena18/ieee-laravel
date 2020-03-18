@@ -26,7 +26,8 @@ class CoursesController extends Controller{
 		return view('courses.certificate',['certificate'=>$certificate]);
 	}
 	public function offline() {
-		$mid_year = Courses::where("type",'=','mid_year')->orderBy('open',"desc")->get();
+		#$mid_year = Courses::where("type",'=','mid_year')->orderBy('year',"desc")->orderBy('open',"desc")->get();
+		$mid_year = Courses::where("type",'=','mid_year')->orderBy('year','desc')->get()->groupBy('year');
 		$summer = Courses::where('type','=','summer')->orderBy('open',"desc")->get();
 		return view('courses.offline',['mid_year'=>$mid_year,'summer'=>$summer]);
 	}

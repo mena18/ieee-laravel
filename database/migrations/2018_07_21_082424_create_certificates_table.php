@@ -18,6 +18,7 @@ class CreateCertificatesTable extends Migration
             $table->string('name');
             $table->integer('attendance');
             $table->string('serial',10)->unique();
+            $table->string('email')->default("");
             $table->integer('course_id')->references('id')->on('Courses')->onDelete('cascade')->onUpdate('cascade');
             $table->string('link');
             $table->timestamps();

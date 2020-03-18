@@ -29,9 +29,9 @@
 								@if(count($summer)>0)
 									@foreach($summer as $course)
 										<li>
-											<a href="#">{{$course->name}} 
+											<a href="#">{{$course->name}}
 												<span>
-													{{$course->open?"Open":"Done"}}
+													{{$course->open?"Open":"Finished"}}
 												</span>
 											</a>
 											<ul class="faq-content">
@@ -63,21 +63,25 @@
 					<div class="slide-left">
 						<ul class="faq-accordion">
 							@if(count($mid_year)>0)
-								@foreach($mid_year as $course)
-									<li>
-										<a href="#">{{$course->name}} 
-											<span>
-												{{$course->open?"Open":"Done"}}
-											</span>
-										</a>
-										<ul class="faq-content">
-											<li>
-												<div>
-													{!!$course->description!!}
-												</div>
-											</li>
-										</ul>
-									</li>
+
+								@foreach($mid_year as $year => $year_courses)
+										<h1 class="courses_year_head">{{$year}}</h1>
+										@foreach($year_courses as $course)
+										<li>
+											<a href="#">{{$course->name}}
+												<span>
+													{{$course->open?"Open":"Finished"}}
+												</span>
+											</a>
+											<ul class="faq-content">
+												<li>
+													<div>
+														{!!$course->description!!}
+													</div>
+												</li>
+											</ul>
+										</li>
+									@endforeach
 								@endforeach
 
 							@else

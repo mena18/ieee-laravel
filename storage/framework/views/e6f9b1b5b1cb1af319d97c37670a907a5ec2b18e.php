@@ -23,6 +23,10 @@
 		</select>
 	</div>
 
+	<div class="form-group">
+		<label class="control-label" for="email">Email : </label>
+		<input class="form-control" type="text" name="email" id='email' value="<?php echo e(old('email')); ?>" placeholder="Email">
+	</div>
 
 	<input type="submit" class="btn btn-success" id="submit" value="Submit">
 </form>
