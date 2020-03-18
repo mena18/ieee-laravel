@@ -49,7 +49,7 @@
 						<li class="dropdown">
 							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">About Us<span class="caret"></span></a>
 							<ul class="dropdown-menu">
-								<li class="{{$active==='about'?'active':''}}"><a href="{{route('about.index')}}">How Are We?</a></li>
+								<li class="{{$active==='about'?'active':''}}"><a href="{{route('about.index')}}">Who Are We?</a></li>
 								<li class="{{$active==='contact'?'active':''}}"><a href="{{route('about.contact')}}">Contact</a></li>
 								<li class="{{$active==='committee'?'active':''}}"><a href="{{route('about.committees')}}">Committees</a></li>
 								<li class="{{$active==='benefits'?'active':''}}"><a href="{{route('about.benefits')}}">IEEE Benefits</a></li>
