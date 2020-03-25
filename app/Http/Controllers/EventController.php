@@ -68,8 +68,10 @@ class EventController extends Controller{
 		$mail = $request->mail;
 		if($save)
 		{
+			/*
             SendEventEmailJob::dispatch($mail, $request->name, $event->title)
                               ->delay(now()->addSeconds(5));
+			*/
 			return redirect('/events/event/'.$id)->with("success","Successfuly Registered");
 		}
 

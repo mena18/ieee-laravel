@@ -20,13 +20,13 @@
 	</div>
 	<div class="form-group">
 		<label class="control-label">Event Date:</label>
-		<input type="date" class="form-control" name="date" placeholder="MM/DD/YYYY" value="{{$event->date?\Carbon\Carbon::createFromFormat('Y-m-d',$event->date)->format('Y-m-d'):''}}">
+		<input type="date" class="form-control" name="date" placeholder="MM/DD/YYYY" value="{{date('Y-m-d', strtotime($event->date))}}">
 	</div>
 	<div class="form-group">
 		<label class="control-label">Event Location:</label>
 		<input type="text" value="{{$event->location}}" data-check="[^A-Za-z0-9 ,\\-]" placeholder="Event Location" id="event-loc"  class="form-control" name="location">
 	</div>
-	
+
 	<?php $speakers = explode(',',$event->speakers);?>
 
 	<!-- old id for <i> was  addSpeaker new one is addSpeaker_2-->

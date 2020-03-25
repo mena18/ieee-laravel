@@ -90,6 +90,7 @@ foreach($speakersNames as $speaker) {
 	</div>
 </div>
 <?php $__env->stopSection(); ?>
+
 <?php echo $__env->make('layout.body',[
 'headerClass'=>'events-single-hero',
 'active'=>'events'

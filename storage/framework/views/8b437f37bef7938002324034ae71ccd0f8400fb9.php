@@ -23,13 +23,13 @@
 	</div>
 	<div class="form-group">
 		<label class="control-label" for="date">Event Date:</label>
-		<input type="date"  class="form-control" id="date" name="date" placeholder="MM/DD/YYYY" value="<?php echo e($event->date?\Carbon\Carbon::createFromTimeString($event->date)->toFormattedDateString():''); ?>">
+		<input type="date"  class="form-control" id="date" name="date" placeholder="MM/DD/YYYY" value="<?php echo e(date('Y-m-d',strtotime($event->date))); ?>">
 	</div>
 	<div class="form-group">
 		<label class="control-label">Event Location:</label>
 		<input type="text" value="<?php echo e($event->location); ?>" data-check="[^A-Za-z0-9 ,\\-]" placeholder="Event Location" id="event-loc"  class="form-control" name="location">
 	</div>
-	
+
 	<div class="form-group">
 		<label class="control-label">Mega Days:</label>
 		<input class="form-control" data-check="[^A-Za-z0-9.\\- ,]" id="event-mega-date"  placeholder="Mega Event Date" name="mega_date" value="<?php echo e($event->mega_date); ?>"/>
@@ -56,4 +56,5 @@
 
 
 <?php $__env->stopSection(); ?>
+
 <?php echo $__env->make('admin.index', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

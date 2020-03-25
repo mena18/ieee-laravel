@@ -13,9 +13,40 @@ class EventsDB extends Seeder
     public function run()
     {
         //
-
+/*
+$event->title = $events[$i][1];
+$event->image = $events[$i][2];
+$event->location = $events[$i][3];
+$event->date = $events[$i][4];
+$event->description = $events[$i][5];
+$event->arabic_description = $events[$i][6];
+$event->speakers = $events[$i][7];
+$event->speakers_images = $events[$i][8];
+$event->mission = $events[$i][9];
+$event->goals = $events[$i][10];
+$event->event_type = $events[$i][11];
+$event->event_open = $events[$i][12] == 1 ? true : false;
+$event->mega = $events[$i][13];
+$event->mega_date = $events[$i][14];
+$event->save();
+*/
 	    $events = [
-[1,'Introduction to Robotics', 'images/events/02d144834153c28c4cff6433c4312b618471ceca.jpg', 'Pharos University', '2014-07-09', 'Introduction to robotics is one of our workshops that successfully produced an IR Robot and taught our attendees how to use C programming language, Arduino language, basic electronic elements, how to make a PCB and microcontrollers as well as how to make a line tracking and sensor Robot that can avoid hitting walls and people while walking by IR sensors. In its second edition it was able to calculate and replace its way to reach its destination as fast and as safe as possible.', NULL, 'Abd Elrhman Elgedawy,Hassan Mohamed balaha', 'images/speakers/person-vector.jpg,images/speakers/person-vector.jpg', '', '', 'workshop', 0, 0, NULL],
+[1,//0
+'Introduction to Robotics',//1
+'images/events/02d144834153c28c4cff6433c4312b618471ceca.jpg',//2
+'Pharos University',//3
+'2014-07-09',//4
+'Introduction to robotics is one of our workshops that successfully produced an IR Robot and taught our attendees how to use C programming language, Arduino language, basic electronic elements, how to make a PCB and microcontrollers as well as how to make a line tracking and sensor Robot that can avoid hitting walls and people while walking by IR sensors. In its second edition it was able to calculate and replace its way to reach its destination as fast and as safe as possible.',
+NULL,//6
+'Abd Elrhman Elgedawy,Hassan Mohamed balaha',//7
+'images/speakers/person-vector.jpg,images/speakers/person-vector.jpg',//8
+'',//9
+'',//10
+'workshop',//11
+0,//12
+0,//13
+NULL]//14
+,
 [2,'Mind Mapping', 'images/events/19dc14f1215af7288009bf86a9914cad70278f7e.jpg', 'Pharos University', '2015-08-03', 'Our attendees Learned to organize their thoughts, make their own efficient plans and solve their problems with this amazing technique: Mind-Mapping. Our speaker gave them an extremely useful visual tool when it comes to studying, decision-making, problem-solving and planning. It will definitely make a drastic change to your way of thinking.', NULL, 'Omar Sobeih', 'images/speakers/person-vector.jpg', '', '', 'workshop', 0, 0, NULL],
 [3,'EED&#39;15', 'images/events/54529c6e7872d2797eb42ecef866d83ee72038c3.jpg', 'Al-Azhar conference center', '2015-08-31', '  An annual summit which includes an exhibition consisting of more than 200 projects from all around Egypt. The conference also hosts &#34;Made in Egypt&#34; [MIE] competition, &#34;Future City&#34; competition as well as an extremely knowledgeable schedule of sessions presented by a great number of distinguished speakers covering a wide range of interests including technology and research, entrepreneurship and soft skills..', NULL, '', 'images/speakers/person-vector.jpg', '', '', 'workshop', 0, 0, NULL],
 [4,'Photoshop from Zero to Hero', 'images/events/3c744565d4113f23715f957bac057d685400753d.jpg', 'Pharos University', '2016-03-01', 'In this event, our attendees learned how to use Photoshop from zero level to higher levels by taking three sessions starting with introduction about the program and then how to get a normal simple photo as close as possible to a professionally taken photo.Finally the third session was about how to start editing your own design from scratch. We always show the interest in increasing our attendees&#39; knowledge.', NULL, 'Mr.Mostafa El Noby', 'images/speakers/person-vector.jpg', 'Help attendees up their levels in Photoshop from zero to higher levels.', '-Providing an intro about Photoshop and what you need.<br />\r\n-Explaining how to get a normal simple photo as close as possible to a professionally taken photo.<br />\r\n-Teaching you how to start editing your own design from scratch.', 'workshop', 0, 0, NULL],
@@ -42,21 +73,21 @@ The tour will take place in four cities; Cairo, Alexandria, Ismailia and Minya.<
 	    for($i = 0; $i < count($events); $i++) {
 	    	$event = new Event();
 
-		    $event->title = $events[$i][1];
-		    $event->image = $events[$i][2];
-		    $event->location = $events[$i][3];
-		    $event->date = $events[$i][4];
-		    $event->description = $events[$i][5];
-		    $event->arabic_description = $events[$i][6];
-		    $event->mission = $events[$i][7];
-		    $event->goals = $events[$i][8];
-		    $event->speakers = $events[$i][9];
-		    $event->speakers_images = $events[$i][10];
-		    $event->event_type = $events[$i][11];
-		    $event->event_open = $events[$i][12] == 1 ? true : false;
-		    $event->mega = $events[$i][13];
-		    $event->mega_date = $events[$i][14];
-	    	$event->save();
+        $event->title = $events[$i][1];
+        $event->image = $events[$i][2];
+        $event->location = $events[$i][3];
+        $event->date = $events[$i][4];
+        $event->description = $events[$i][5];
+        $event->arabic_description = $events[$i][6];
+        $event->speakers = $events[$i][7];
+        $event->speakers_images = $events[$i][8];
+        $event->mission = $events[$i][9];
+        $event->goals = $events[$i][10];
+        $event->event_type = $events[$i][11];
+        $event->event_open = $events[$i][12] == 1 ? true : false;
+        $event->mega = $events[$i][13];
+        $event->mega_date = $events[$i][14];
+        $event->save();
 	    }
     }
 }
