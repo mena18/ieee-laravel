@@ -14,4 +14,6 @@
 8 - the description of events is wrong (bullets dosen't work)
 12 - change about us design
 14 - news creating/editing/deleting
- 
+15 - change new board [html&css] structure  
+16 - change hadder image
+17 - change image quality

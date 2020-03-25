@@ -5,6 +5,193 @@
 	<h2>Board</h2>
 <?php $__env->stopSection(); ?>
 <?php $__env->startSection('content'); ?>
+
+<style>
+	img{
+		width:245px;
+		height:338px;
+	}
+</style>
+
+<section class="boardMember">
+	<div class="container">
+
+
+		<section class="data-of-board">
+			<div class="container ">
+				<div class="title ">
+					2019/2020 Board
+				</div>
+			</div>
+		</section>
+
+
+		<div class="row ">
+			<div class="col-xs-6 col-md-3 col-lg-3 member ">
+				<img class="image " src="<?php echo e(URL::to('')); ?>/images/board/Board-2019-2020/Ahmed-Helmy.jpg " alt="Ahmed Helmy" title="Ahmed Helmy">
+
+				<div class="social " style="margin-right: 0 ">
+					<div class="facebook ">
+						<a href="" target="_blank ">
+							<i class="fa fa-facebook " aria-hidden="true "></i>
+						</a>
+					</div>
+					<div class="linkedin ">
+						<a href="#" target="_blank ">
+							<i class="fa fa-linkedin-square " aria-hidden="true "></i>
+						</a>
+					</div>
+				</div>
+
+			</div>
+			<div class="col-xs-6 col-md-3 col-lg-3 member ">
+				<img class="image " src="<?php echo e(URL::to('')); ?>/images/board/Board-2019-2020/Muhhaned-Mohamed.jpg " alt="Muhhaned Mohamed " title="Muhhaned Mohamed">
+
+				<div class="social " style="margin-right: 0 ">
+					<div class="facebook ">
+						<a href="" target="_blank ">
+							<i class="fa fa-facebook " aria-hidden="true "></i>
+						</a>
+					</div>
+					<div class="linkedin ">
+						<a href="#" target="_blank ">
+							<i class="fa fa-linkedin-square " aria-hidden="true "></i>
+						</a>
+					</div>
+				</div>
+
+			</div>
+			<div class="col-xs-6 col-md-3 col-lg-3 member ">
+				<img class="image " src="<?php echo e(URL::to('')); ?>/images/board/Board-2019-2020/Khaled-Abdelhaleem.jpg" alt="Khaled Abdelhaleem" title="Khaled Abdelhaleem">
+
+				<div class="social " style="margin-right: 0 ">
+					<div class="facebook ">
+						<a href="" target="_blank ">
+							<i class="fa fa-facebook " aria-hidden="true "></i>
+						</a>
+					</div>
+					<div class="linkedin ">
+						<a href="#" target="_blank ">
+							<i class="fa fa-linkedin-square " aria-hidden="true "></i>
+						</a>
+					</div>
+				</div>
+
+			</div>
+
+			<div class="col-xs-6 col-md-3 col-lg-3 member ">
+				<img class="image " src="<?php echo e(URL::to('')); ?>/images/board/Board-2019-2020/Rewan-Elnagar.jpg " alt="Rewan Elnagar" title="Rewan Elnagar">
+
+				<div class="social " style="margin-right: 0 ">
+					<div class="facebook ">
+						<a href="" target="_blank ">
+							<i class="fa fa-facebook " aria-hidden="true "></i>
+						</a>
+					</div>
+					<div class="linkedin ">
+						<a href="#" target="_blank ">
+							<i class="fa fa-linkedin-square " aria-hidden="true "></i>
+						</a>
+					</div>
+				</div>
+			</div>
+
+			<div class="clearfix "></div>
+			<hr class="hr-mg ">
+		</div>
+
+
+
+
+
+
+		<section class="data-of-board ">
+			<div class="container ">
+				<div class="title ">
+					2018 / 2019 Board
+				</div>
+			</div>
+		</section>
+
+
+		<div class="row ">
+			<div class="col-xs-6 col-md-3 col-lg-3 member ">
+				<img class="image " src="<?php echo e(URL::to('')); ?>/images/board/Board-2018-2019/Mohamed-sobhy.jpg " alt="Mohamed sobhy" title="Mohamed sobhy">
+
+				<div class="social " style="margin-right: 0 ">
+					<div class="facebook ">
+						<a href="#" target="_blank ">
+							<i class="fa fa-facebook " aria-hidden="true "></i>
+						</a>
+					</div>
+					<div class="linkedin ">
+						<a href="#" target="_blank ">
+							<i class="fa fa-linkedin-square " aria-hidden="true "></i>
+						</a>
+					</div>
+				</div>
+
+			</div>
+			<div class="col-xs-6 col-md-3 col-lg-3 member ">
+				<img class="image " src="<?php echo e(URL::to('')); ?>/images/board/Board-2018-2019/Ayman-Mohamed.jpg" alt="Ayman Mohamed" title="Ayman Mohamed">
+
+				<div class="social " style="margin-right: 0 ">
+					<div class="facebook ">
+						<a href="#" target="_blank ">
+							<i class="fa fa-facebook " aria-hidden="true "></i>
+						</a>
+					</div>
+					<div class="linkedin ">
+						<a href="#" target="_blank ">
+							<i class="fa fa-linkedin-square " aria-hidden="true "></i>
+						</a>
+					</div>
+				</div>
+			</div>
+			<div class="col-xs-6 col-md-3 col-lg-3 member ">
+				<img class="image " src="<?php echo e(URL::to('')); ?>/images/board/Board-2018-2019/Ahmed-Helmy.jpg" alt="Ahmed Helmy" title="Ahmed Helmy">
+
+				<div class="social " style="margin-right: 0 ">
+					<div class="facebook ">
+						<a href="#" target="_blank ">
+							<i class="fa fa-facebook " aria-hidden="true "></i>
+						</a>
+					</div>
+					<div class="linkedin ">
+						<a href="#" target="_blank ">
+							<i class="fa fa-linkedin-square " aria-hidden="true "></i>
+						</a>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-xs-6 col-md-3 col-lg-3 member ">
+				<img class="image " src="<?php echo e(URL::to('')); ?>/images/board/Board-2018-2019/Hadeer-Samy.jpg " alt="Hadeer Samy" title="Hadeer Samy">
+
+				<div class="social " style="margin-right: 0 ">
+					<div class="facebook ">
+						<a href="#" target="_blank ">
+							<i class="fa fa-facebook " aria-hidden="true "></i>
+						</a>
+					</div>
+					<div class="linkedin ">
+						<a href="#" target="_blank ">
+							<i class="fa fa-linkedin-square " aria-hidden="true "></i>
+						</a>
+					</div>
+				</div>
+
+			</div>
+
+			<div class="clearfix "></div>
+			<hr class="hr-mg ">
+		</div>
+
+	</div>
+</section>
+
+
+
 <section class="data-of-board">
 	<div class="container">
 		<div class="title1">
@@ -226,4 +413,5 @@
 	</div>
 </section>
 <?php $__env->stopSection(); ?>
+
 <?php echo $__env->make('layout.body',['headerClass'=>'news-hero','active'=>'board','script'=>'board'], array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
