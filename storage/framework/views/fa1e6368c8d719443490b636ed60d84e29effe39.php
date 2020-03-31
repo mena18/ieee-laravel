@@ -120,12 +120,12 @@
 
 				<div class="social " style="margin-right: 0 ">
 					<div class="facebook ">
-						<a href="#" target="_blank ">
+						<a href="https://www.facebook.com/profile.php?id=100000879405499" target="_blank ">
 							<i class="fa fa-facebook " aria-hidden="true "></i>
 						</a>
 					</div>
 					<div class="linkedin ">
-						<a href="#" target="_blank ">
+						<a href="https://www.linkedin.com/in/mohamed-sobhy-a2abb814a/" target="_blank ">
 							<i class="fa fa-linkedin-square " aria-hidden="true "></i>
 						</a>
 					</div>
@@ -165,23 +165,6 @@
 				</div>
 			</div>
 
-			<div class="col-xs-6 col-md-3 col-lg-3 member ">
-				<img class="image " src="<?php echo e(URL::to('')); ?>/images/board/Board-2018-2019/Hadeer-Samy.jpg " alt="Hadeer Samy" title="Hadeer Samy">
-
-				<div class="social " style="margin-right: 0 ">
-					<div class="facebook ">
-						<a href="#" target="_blank ">
-							<i class="fa fa-facebook " aria-hidden="true "></i>
-						</a>
-					</div>
-					<div class="linkedin ">
-						<a href="#" target="_blank ">
-							<i class="fa fa-linkedin-square " aria-hidden="true "></i>
-						</a>
-					</div>
-				</div>
-
-			</div>
 
 			<div class="clearfix "></div>
 			<hr class="hr-mg ">
