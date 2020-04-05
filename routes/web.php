@@ -4,30 +4,26 @@
 
 Route::get('/','MainController@index')->name('home');
 
-Route::prefix('news')->group(function ()
-{
+Route::prefix('news')->group(function (){
 	Route::get('/', 'NewsController@index')->name('news.all');
 	Route::get('/{id?}', 'NewsController@show')->name('news.show');
 });
 
-Route::prefix('events')->group(function ()
-{
+Route::prefix('events')->group(function (){
 	Route::get('/', 'EventController@index')->name('events.all');
 	Route::get('/event/{id?}', 'EventController@show')->name('events.event');
 	Route::get('/register/{id?}', 'EventController@register')->name('event.register');
 	Route::post('/attendance/{id?}', 'EventController@attendance')->name('event.attendance');
 });
 
-Route::group(['prefix'=>'mega'], function ()
-{
+Route::group(['prefix'=>'mega'], function (){
 	Route::get('/', 'MegaController@index')->name('mega.all');
 	Route::get('/event/{id?}', 'MegaController@show')->name('mega.event');
 	Route::post('/register/{id?}', ['uses'=>'MegaController@register','as'=>'mega.register']);
 });
 
 
-Route::prefix('team')->group(function ()
-{
+Route::prefix('team')->group(function (){
 	Route::get('/volunteers', 'TeamController@volunteers')->name('team.volunteers');
 	Route::get('/webmasters', 'TeamController@webmasters')->name('team.webmasters');
 	Route::get('/board', 'TeamController@board')->name('team.board');
@@ -36,15 +32,13 @@ Route::prefix('team')->group(function ()
 
 
 
-Route::prefix('gallery')->group(function ()
-{
+Route::prefix('gallery')->group(function (){
 	Route::get('/', 'GalleryController@index')->name('gallery');
 });
 
 Route::get('/schedule', function () {return view('about.schedule');})->name('schedule');
 
-Route::prefix('courses')->group(function ()
-{
+Route::prefix('courses')->group(function (){
 	Route::get('/', 'CoursesController@index')->name('courses.index');
 	Route::get('/certificate/{serial?}', 'CoursesController@certificate')->name('courses.certificate');
 	Route::get('/offline', 'CoursesController@offline')->name('courses.offline');
@@ -52,14 +46,18 @@ Route::prefix('courses')->group(function ()
 
 });
 
-Route::prefix('about')->group(function ()
-{
+Route::prefix('about')->group(function (){
 	Route::get('/', 'AboutController@index')->name('about.index');
 	Route::get('/contact', 'AboutController@contact')->name('about.contact');
   Route::post('/contact', 'MessagesController@store');
 	Route::get('/committees', 'AboutController@committees')->name('about.committees');
 	Route::get('/benefits','AboutController@benefits')->name('about.benefits');
 
+});
+
+Route::prefix('magazines')->group(function (){
+	Route::get('/', 'magazineController@index')->name('magazine.index');
+	Route::get('/first', 'magazineController@show')->name('magazine.show');
 });
 
 /***************************************** End of Guest Section *******************************************/
