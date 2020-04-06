@@ -57,7 +57,7 @@ Route::prefix('about')->group(function (){
 
 Route::prefix('magazines')->group(function (){
 	Route::get('/', 'magazineController@index')->name('magazine.index');
-	Route::get('/first', 'magazineController@show')->name('magazine.show');
+	Route::get('/{id}', 'magazineController@show')->name('magazine.show');
 });
 
 /***************************************** End of Guest Section *******************************************/
@@ -169,6 +169,24 @@ Route::group(['middleware'=>"auth"], function () {
         });
 
     });
+
+		Route::prefix('magazine')->group(function(){
+
+
+
+        /*the attendee home is event */
+        Route::get('/','admin_magazine@home')->name('magazine.home');
+        Route::get('/create','admin_magazine@create')->name('magazine.create');
+        Route::post('/store','admin_magazine@store')->name('magazine.store');
+        Route::get('/edit/{id}','admin_magazine@edit')->name('magazine.edit');
+        Route::post('/update/{id}','admin_magazine@update')->name('magazine.update');
+        Route::get('/delete/{id}','admin_magazine@destroy')->name('magazine.delete');
+        /******  Event Attendee ******/
+
+
+
+    });
+
 
     Route::prefix('attendee')->group(function(){
 

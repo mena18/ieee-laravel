@@ -10,13 +10,14 @@
 
   <section class="magazines">
     <div class="container">
-      <div class="magazine">
-        <a href="{{route('magazine.show')}}">
-          <img src="{{URL::to('images/mag.jpg')}}">
-          <h2>First Edition</h2>
-        </a>
-      </div>
-
+			@foreach ($magazines as $magazine)
+	      <div class="magazine">
+	        <a href="{{route('magazine.show',$magazine->id)}}">
+	          <img src="{{URL::to($magazine->image)}}">
+	          <h2>{{$magazine->name}}</h2>
+	        </a>
+	      </div>
+			@endforeach
     </div>
   </section >
 

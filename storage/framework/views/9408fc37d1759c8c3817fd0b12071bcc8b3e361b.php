@@ -9,13 +9,14 @@
 
   <section class="magazines">
     <div class="container">
-      <div class="magazine">
-        <a href="<?php echo e(route('magazine.show')); ?>">
-          <img src="<?php echo e(URL::to('images/mag.jpg')); ?>">
-          <h2>First Edition</h2>
-        </a>
-      </div>
-
+			<?php $__currentLoopData = $magazines; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $magazine): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+	      <div class="magazine">
+	        <a href="<?php echo e(route('magazine.show',$magazine->id)); ?>">
+	          <img src="<?php echo e(URL::to($magazine->image)); ?>">
+	          <h2><?php echo e($magazine->name); ?></h2>
+	        </a>
+	      </div>
+			<?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
     </div>
   </section >
 
