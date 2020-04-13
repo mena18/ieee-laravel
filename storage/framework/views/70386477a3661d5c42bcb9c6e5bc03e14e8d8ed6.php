@@ -1,7 +1,7 @@
 <div class="col-xs-6 col-lg-3 <?php echo e($event->event_type); ?>">
     <div class="events-item">
         <div class="events-item-img">
-            <a class="home-event-img bg" href="<?php echo e(route('events.event', ['id'=>$event->id])); ?>" style="background-image:url(<?php echo e($event->image); ?>);">
+            <a class="home-event-img bg" href="<?php echo e(route('events.event', ['id'=>$event->id])); ?>" style="background-image:url(<?php echo e(URL::to($event->image)); ?>);">
             </a>
         </div>
         <div class="events-item-info">

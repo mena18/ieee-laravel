@@ -62,6 +62,10 @@
         </li>
 
         <li>
+          <a href="{{route('magazine.home')}}"><i class="fa fa-newspaper-o" aria-hidden="true"></i> <span>Magazines</span></a>
+        </li>
+
+        <li>
           <a href="{{route('courses.home')}}"><i class="fa fa-graduation-cap" aria-hidden="true"></i> <span>Courses</span></a>
         </li>
 

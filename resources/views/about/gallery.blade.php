@@ -23,6 +23,10 @@
       margin-top: 15px;
       margin-bottom: 15px;
     }
+		.img-thumbnail{
+			width:330px;
+			height:220px;
+		}
 </style>
 <div class="up"></div>
 
@@ -31,13 +35,12 @@
 
         <div class="row">
             @foreach($gallery as $img)
-            
             <div class="col-sm-6 gallery-item thumb ">
-                <a href="{{route('events.event',$img->event_id)}}"><h4>{{$img->event['title']}}</h4></a>
-                <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title="{{$img->description}}"
+                <!-- <a href="{{route('events.event',$img->event_id)}}"><h4>{{$img->event['title']}}</h4></a> -->
+                <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title="{{strip_tags($img->description)}}"
                    data-image="{{URL::to($img->url)}}"
                    data-target="#image-gallery">
-                    <img class="img-thumbnail"
+                    <img style="width:330px;height=220px;" class="img-thumbnail"
                          src="{{URL::to($img->url)}}"
                          alt="Another alt text">
                 </a>

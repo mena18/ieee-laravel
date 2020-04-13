@@ -1,7 +1,7 @@
 <div class="col-xs-6 col-lg-3 {{$event->event_type}}">
     <div class="events-item">
         <div class="events-item-img">
-            <a class="home-event-img bg" href="{{route('events.event', ['id'=>$event->id])}}" style="background-image:url({{$event->image}});">
+            <a class="home-event-img bg" href="{{route('events.event', ['id'=>$event->id])}}" style="background-image:url({{URL::to($event->image)}});">
             </a>
         </div>
         <div class="events-item-info">

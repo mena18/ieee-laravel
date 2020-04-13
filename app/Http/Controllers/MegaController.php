@@ -64,6 +64,9 @@ class MegaController extends Controller
     public function show($id)
     {
         $event = Event::find($id);
+        if(!$event){
+          return redirect()->back()->with('error',"Mega Event Dosen't Exists");
+        }
         return view('mega.singleevent', ['event'=>$event]);
     }
 

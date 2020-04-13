@@ -6,6 +6,176 @@
 	<h2>Board</h2>
 @endsection
 @section('content')
+
+<style>
+	img{
+		width:245px;
+		height:338px;
+	}
+</style>
+
+<section class="boardMember">
+	<div class="container">
+
+
+		<section class="data-of-board">
+			<div class="container ">
+				<div class="title ">
+					2019/2020 Board
+				</div>
+			</div>
+		</section>
+
+
+		<div class="row ">
+			<div class="col-xs-6 col-md-3 col-lg-3 member ">
+				<img class="image " src="{{URL::to('')}}/images/board/Board-2019-2020/Ahmed-Helmy.jpg " alt="Ahmed Helmy" title="Ahmed Helmy">
+
+				<div class="social " style="margin-right: 0 ">
+					<div class="facebook ">
+						<a href="" target="_blank ">
+							<i class="fa fa-facebook " aria-hidden="true "></i>
+						</a>
+					</div>
+					<div class="linkedin ">
+						<a href="#" target="_blank ">
+							<i class="fa fa-linkedin-square " aria-hidden="true "></i>
+						</a>
+					</div>
+				</div>
+
+			</div>
+			<div class="col-xs-6 col-md-3 col-lg-3 member ">
+				<img class="image " src="{{URL::to('')}}/images/board/Board-2019-2020/Muhhaned-Mohamed.jpg " alt="Muhhaned Mohamed " title="Muhhaned Mohamed">
+
+				<div class="social " style="margin-right: 0 ">
+					<div class="facebook ">
+						<a href="" target="_blank ">
+							<i class="fa fa-facebook " aria-hidden="true "></i>
+						</a>
+					</div>
+					<div class="linkedin ">
+						<a href="#" target="_blank ">
+							<i class="fa fa-linkedin-square " aria-hidden="true "></i>
+						</a>
+					</div>
+				</div>
+
+			</div>
+			<div class="col-xs-6 col-md-3 col-lg-3 member ">
+				<img class="image " src="{{URL::to('')}}/images/board/Board-2019-2020/Khaled-Abdelhaleem.jpg" alt="Khaled Abdelhaleem" title="Khaled Abdelhaleem">
+
+				<div class="social " style="margin-right: 0 ">
+					<div class="facebook ">
+						<a href="" target="_blank ">
+							<i class="fa fa-facebook " aria-hidden="true "></i>
+						</a>
+					</div>
+					<div class="linkedin ">
+						<a href="#" target="_blank ">
+							<i class="fa fa-linkedin-square " aria-hidden="true "></i>
+						</a>
+					</div>
+				</div>
+
+			</div>
+
+			<div class="col-xs-6 col-md-3 col-lg-3 member ">
+				<img class="image " src="{{URL::to('')}}/images/board/Board-2019-2020/Rewan-Elnagar.jpg " alt="Rewan Elnagar" title="Rewan Elnagar">
+
+				<div class="social " style="margin-right: 0 ">
+					<div class="facebook ">
+						<a href="" target="_blank ">
+							<i class="fa fa-facebook " aria-hidden="true "></i>
+						</a>
+					</div>
+					<div class="linkedin ">
+						<a href="#" target="_blank ">
+							<i class="fa fa-linkedin-square " aria-hidden="true "></i>
+						</a>
+					</div>
+				</div>
+			</div>
+
+			<div class="clearfix "></div>
+			<hr class="hr-mg ">
+		</div>
+
+
+
+
+
+
+		<section class="data-of-board ">
+			<div class="container ">
+				<div class="title ">
+					2018 / 2019 Board
+				</div>
+			</div>
+		</section>
+
+
+		<div class="row ">
+			<div class="col-xs-6 col-md-3 col-lg-3 member ">
+				<img class="image " src="{{URL::to('')}}/images/board/Board-2018-2019/Mohamed-sobhy.jpg " alt="Mohamed sobhy" title="Mohamed sobhy">
+
+				<div class="social " style="margin-right: 0 ">
+					<div class="facebook ">
+						<a href="https://www.facebook.com/profile.php?id=100000879405499" target="_blank ">
+							<i class="fa fa-facebook " aria-hidden="true "></i>
+						</a>
+					</div>
+					<div class="linkedin ">
+						<a href="https://www.linkedin.com/in/mohamed-sobhy-a2abb814a/" target="_blank ">
+							<i class="fa fa-linkedin-square " aria-hidden="true "></i>
+						</a>
+					</div>
+				</div>
+
+			</div>
+			<div class="col-xs-6 col-md-3 col-lg-3 member ">
+				<img class="image " src="{{URL::to('')}}/images/board/Board-2018-2019/Ayman-Mohamed.jpg" alt="Ayman Mohamed" title="Ayman Mohamed">
+
+				<div class="social " style="margin-right: 0 ">
+					<div class="facebook ">
+						<a href="#" target="_blank ">
+							<i class="fa fa-facebook " aria-hidden="true "></i>
+						</a>
+					</div>
+					<div class="linkedin ">
+						<a href="#" target="_blank ">
+							<i class="fa fa-linkedin-square " aria-hidden="true "></i>
+						</a>
+					</div>
+				</div>
+			</div>
+			<div class="col-xs-6 col-md-3 col-lg-3 member ">
+				<img class="image " src="{{URL::to('')}}/images/board/Board-2018-2019/Ahmed-Helmy.jpg" alt="Ahmed Helmy" title="Ahmed Helmy">
+
+				<div class="social " style="margin-right: 0 ">
+					<div class="facebook ">
+						<a href="#" target="_blank ">
+							<i class="fa fa-facebook " aria-hidden="true "></i>
+						</a>
+					</div>
+					<div class="linkedin ">
+						<a href="#" target="_blank ">
+							<i class="fa fa-linkedin-square " aria-hidden="true "></i>
+						</a>
+					</div>
+				</div>
+			</div>
+
+
+			<div class="clearfix "></div>
+			<hr class="hr-mg ">
+		</div>
+
+	</div>
+</section>
+
+
+
 <section class="data-of-board">
 	<div class="container">
 		<div class="title1">

@@ -3,18 +3,20 @@
 	All Events
 @endsection
 @section('content')
+
+
 <section class="events-search-filter" style="background-color:#fff;">
 	<div class="container">
 		<div class="row">
 			<div class="section-content clearfix">
 				<div class="col-sm-4 btn-body">
-					<a href="#" id="visits" class="btn" data-title="Visits" data-index='0'></a>
+					<a href="{{route('events.all','visit')}}" id="visits" class="btn <?php if($name=='visit'){echo 'btnActive';} ?>" data-title="Visits" data-index='0'></a>
 				</div>
 				<div class="col-sm-4 btn-body">
-					<a href="#" id="workshop" class="btn" data-title="Workshops" data-index='1'></a>
+					<a href="{{route('events.all','workshop')}}" id="workshop" class="btn <?php if($name=='workshop'){echo 'btnActive';} ?>" data-title="Workshops" data-index='1'></a>
 				</div>
 				<div class="col-sm-4 btn-body">
-					<a href="#" id="sessions" class="btn" data-title="Sessions" data-index='2'></a>
+					<a href="{{route('events.all','session')}}" id="sessions" class="btn <?php if($name=='session'){echo 'btnActive';} ?>" data-title="Sessions" data-index='2'></a>
 				</div>
 			</div>
 		</div>

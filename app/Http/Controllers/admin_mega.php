@@ -11,7 +11,7 @@ class admin_mega extends Controller{
 
     public function home(){
         $events = Event::where('events.mega','=',1)->orderBy('date', 'DESC')->get();
-        return view('admin.mega.viewmega',['events'=>$events]); 
+        return view('admin.mega.viewmega',['events'=>$events]);
     }
 
     public function create(){
@@ -20,13 +20,12 @@ class admin_mega extends Controller{
 
     public function store(Request $request){
 
-        $this->validate($request, [
+        $val = $this->validate($request, [
             'name'=>'required',
             'event_image'=>'required',
-            'location'=>'required',
             'date'=>'required',
+            'location'=>'required',
             'description'=>'required',
-            'arabic_description'=>'',
             'mega_date'=>'required',
         ]);
 
@@ -66,17 +65,17 @@ class admin_mega extends Controller{
     public function update(Request $request,$id){
 
         $event = Event::find($id);
+
         if (is_null($event)) {
             return redirect('/admin');
         }
 
-        $this->validate($request, [
-                'name'=>'required',
-                'location'=>'required',
-                'date'=>'required',
-                'description'=>'required',
-                'arabic_description'=>'',
-                'mega_date'=>'required',
+        $val = $this->validate($request, [
+            'name'=>'required',
+            'date'=>'required',
+            'location'=>'required',
+            'description'=>'required',
+            'mega_date'=>'required',
         ]);
 
         if(!is_null($request->event_image)){
@@ -84,7 +83,7 @@ class admin_mega extends Controller{
             $img_1 = time() . '.' . $request->event_image->getClientOriginalExtension();
             $request->event_image->move(public_path('images/events'),$img_1);
             $event->image = 'images/events/'.$img_1;
-            
+
         }
 
         $event->title = $request['name'];
@@ -95,7 +94,6 @@ class admin_mega extends Controller{
         $event->mega_date = $request['mega_date'];
 
         $update = $event->update();
-
         if($update){
             return redirect()->back()->with('success', "Updated Successfuly");
         }
