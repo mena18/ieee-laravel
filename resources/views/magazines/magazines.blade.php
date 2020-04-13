@@ -10,14 +10,21 @@
 
   <section class="magazines">
     <div class="container">
-			@foreach ($magazines as $magazine)
-	      <div class="magazine">
-	        <a href="{{route('magazine.show',$magazine->id)}}">
-	          <img src="{{URL::to($magazine->image)}}">
-	          <h2>{{$magazine->name}}</h2>
-	        </a>
-	      </div>
-			@endforeach
+
+			@if (count($magazines)>0)
+				@foreach ($magazines as $magazine)
+		      <div class="magazine">
+		        <a href="{{route('magazine.show',$magazine->id)}}">
+		          <img src="{{URL::to($magazine->image)}}">
+		          <h2>{{$magazine->name}}</h2>
+		        </a>
+		      </div>
+				@endforeach
+			@else
+				<div>
+					<h1>Coming Soon</h1>
+				</div>
+			@endif
     </div>
   </section >
 
