@@ -19,7 +19,8 @@
 		          <h2>{{$magazine->name}}</h2>
 		        </a>
 		      </div>
-				@endforeach
+			
+		      @endforeach
 			@else
 				<div>
 					<h1>Coming Soon</h1>

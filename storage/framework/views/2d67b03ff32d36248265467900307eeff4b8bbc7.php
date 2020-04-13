@@ -1,9 +1,9 @@
 <?php $__env->startSection('content'); ?>
-   
+
 
 <h1>Volunteers</h1>
 <?php if(Auth::user()->admin == 1): ?>
-    <a href="<?php echo e(route('volunteer.create')); ?>" class="btn btn-success">Create New volunteers</a>
+    <a href="<?php echo e(route('volunteer.create')); ?>" class="btn btn-success">+ Add New volunteers</a>
 <?php endif; ?>
 
 
@@ -63,4 +63,5 @@
     <a href="<?php echo e(route('volunteer.download')); ?>" class="btn btn-success">Download</a>
 <?php endif; ?>
 <?php $__env->stopSection(); ?>
+
 <?php echo $__env->make('admin.index', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

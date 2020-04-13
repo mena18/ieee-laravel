@@ -32,7 +32,6 @@
 								<li class="{{$active==='mega'?'active':''}}"><a href="{{route('mega.all')}}">Mega Events</a></li>
 
 								<li class="{{$active==='news'?'active':''}}"><a href="{{route('news.all')}}">News</a></li>
-								<li class="{{$active==='magazine'?'active':''}}"><a href="{{route('magazine.index')}}">Magazine</a></li>
 								<li class="{{$active==='schedule'?'active':''}}"><a href="{{route('schedule')}}">Schedule</a></li>
 							</ul>
 						</li>
