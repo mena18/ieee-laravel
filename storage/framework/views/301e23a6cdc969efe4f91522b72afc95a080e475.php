@@ -25,6 +25,11 @@
 	</div>
 
 	<div class="form-group">
+		<label class="control-label" for="year">Year : </label>
+		<input class="form-control" type="number" name="year" id='year' value="<?php echo e(old('year')); ?>" placeholder="year">
+	</div>
+
+	<div class="form-group">
 		<label class="control-label" for="type">Type : </label>
 		<select id="type" class="form-control" name="type">
 			<option <?php if(old('type')=='mid_year'): ?> selected <?php endif; ?> value="mid_year">Mid Year Course</option>

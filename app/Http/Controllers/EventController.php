@@ -10,9 +10,14 @@ use App\jobs\SendEventEmailJob;
 
 class EventController extends Controller{
 
-	public function index(){
-		$events = Event::where('mega','0')->orderBy('date', 'DESC')->get();
-		return view('events.index',['events'=>$events]);
+	public function index($name=""){
+		if(!$name){
+			$events = Event::where('mega','0')->orderBy('date', 'DESC')->get();
+			return view('events.index',['events'=>$events,'name'=>"all"]);
+		}else{
+			$events = Event::where('mega','0')->where('event_type',$name)->orderBy('date', 'DESC')->get();
+			return view('events.index',['events'=>$events,'name'=>$name]);
+		}
 	}
 
     public function show($id = 0){

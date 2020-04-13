@@ -1,11 +1,11 @@
 @extends('admin.index')
 
 @section('content')
-   
+
 
 <h1>Volunteers</h1>
 @if(Auth::user()->admin == 1)
-    <a href="{{route('volunteer.create')}}" class="btn btn-success">Create New volunteers</a>
+    <a href="{{route('volunteer.create')}}" class="btn btn-success">+ Add New volunteers</a>
 @endif
 
 

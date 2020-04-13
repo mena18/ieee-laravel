@@ -10,7 +10,7 @@ Route::prefix('news')->group(function (){
 });
 
 Route::prefix('events')->group(function (){
-	Route::get('/', 'EventController@index')->name('events.all');
+	Route::get('/{name?}', 'EventController@index')->name('events.all');
 	Route::get('/event/{id?}', 'EventController@show')->name('events.event');
 	Route::get('/register/{id?}', 'EventController@register')->name('event.register');
 	Route::post('/attendance/{id?}', 'EventController@attendance')->name('event.attendance');

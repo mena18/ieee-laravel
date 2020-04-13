@@ -17,7 +17,7 @@
 	</div>
 
 	<div class="form-group">
-		<label class="control-label">Upload Gallery Image:</label>
+		<label class="control-label">Upload Gallery Image : (330px X 223px)</label>
 		<input name="url" type="file" onchange="ValidateSingleInput(this);">
 	</div>
 

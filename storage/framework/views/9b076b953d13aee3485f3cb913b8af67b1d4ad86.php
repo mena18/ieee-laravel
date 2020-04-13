@@ -15,7 +15,7 @@
 	</div>
 
 	<div class="form-group">
-		<label class="control-label">Upload Gallery Image:</label>
+		<label class="control-label">Upload Gallery Image: (330*223)</label>
 		<input name="url" type="file" onchange="ValidateSingleInput(this);">
 	</div>
 
@@ -35,4 +35,5 @@
 
 
 <?php $__env->stopSection(); ?>
+
 <?php echo $__env->make('admin.index', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

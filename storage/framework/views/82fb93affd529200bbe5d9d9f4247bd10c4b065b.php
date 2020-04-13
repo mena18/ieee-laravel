@@ -22,6 +22,10 @@
       margin-top: 15px;
       margin-bottom: 15px;
     }
+		.img-thumbnail{
+			width:330px;
+			height:220px;
+		}
 </style>
 <div class="up"></div>
 
@@ -30,13 +34,12 @@
 
         <div class="row">
             <?php $__currentLoopData = $gallery; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $img): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-            
             <div class="col-sm-6 gallery-item thumb ">
-                <a href="<?php echo e(route('events.event',$img->event_id)); ?>"><h4><?php echo e($img->event['title']); ?></h4></a>
-                <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title="<?php echo e($img->description); ?>"
+                <!-- <a href="<?php echo e(route('events.event',$img->event_id)); ?>"><h4><?php echo e($img->event['title']); ?></h4></a> -->
+                <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title="<?php echo e(strip_tags($img->description)); ?>"
                    data-image="<?php echo e(URL::to($img->url)); ?>"
                    data-target="#image-gallery">
-                    <img class="img-thumbnail"
+                    <img style="width:330px;height=220px;" class="img-thumbnail"
                          src="<?php echo e(URL::to($img->url)); ?>"
                          alt="Another alt text">
                 </a>
@@ -68,4 +71,5 @@
     </div>
 </div>
 <?php $__env->stopSection(); ?>
+
 <?php echo $__env->make('layout.body',['headerClass'=>'events-hero','active'=>'gallery','script'=>'gallery3'], array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
