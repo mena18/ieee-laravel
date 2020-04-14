@@ -17,7 +17,7 @@ function delete_image($image){
             Storage::delete($image);
         }
     } catch (Exception $e) {
-                        
+
     }
 }
 
@@ -25,7 +25,7 @@ class admin_events extends Controller{
     public function home()
     {
         $events = Event::where('events.mega','=',0)->orderBy('date', 'DESC')->get();
-        return view('admin.events.viewevent',['events'=>$events]); 
+        return view('admin.events.viewevent',['events'=>$events]);
     }
 
     public function create()
@@ -34,15 +34,15 @@ class admin_events extends Controller{
         return view('admin.events.addevent',['events'=>$events]);
     }
 
-    public function store(Request $request)
-    {
+    public function store(Request $request){
+
         $this->validate($request, [
                 'name'=>'required',
                 'event_image'=>'required',
                 'location'=>'required',
                 'date'=>'required',
                 'description'=>'required',
-                'speakers'=>'array|required',
+                'speakers'=>'array',
                 'speakers_images'=>'array',
                 'event_type'=>'required',
         ]);
@@ -51,7 +51,7 @@ class admin_events extends Controller{
         $speakers = [];
         $speakers_images = [];
         foreach($request->speakers as $speaker) {
-
+                if(!$speaker){$i++;continue;}
                 if (!isset($request->speakers_images[$i]) || is_null($request->speakers_images[$i])) {
                     $p = "person-vector.jpg";
                 } else {
@@ -62,13 +62,20 @@ class admin_events extends Controller{
                 $speakers_images[] = 'images/speakers/'.$p;
             $i++;
         }
-        
-        
+
+
 
         $event = new Event();
 
         $p = time(). 'E' . '.' . $request->event_image->getClientOriginalExtension();
         $request->event_image->move(public_path('images/events'),$p);
+
+
+
+        if($request['event_type']!='visit' && count($speakers)==0){
+          return redirect()->back()->with('error',"Speaksers Required");
+        }
+
 
         $event->title = $request['name'];
         $event->image =  'images/events/'.$p;
@@ -148,12 +155,16 @@ class admin_events extends Controller{
             }
             $i++;
         }
-        
+
         if(!is_null($request->event_image)){
             Storage::delete($event->image);
             $img_1 = time() . '.' . $request->event_image->getClientOriginalExtension();
             $request->event_image->move(public_path('images/events'),$img_1);
             $event->image = 'images/events/'.$img_1;
+        }
+
+        if($request['event_type']!='visit' && count($speakers)==0){
+          return redirect()->back()->with('error',"Speaksers Required");
         }
 
         $event->title = $request['name'];

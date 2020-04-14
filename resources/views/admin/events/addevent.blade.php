@@ -22,7 +22,7 @@
 		<label class="control-label">Event Location:</label>
 		<input type="text" value="{{old('location')}}" data-check="[^A-Za-z0-9 ,\\-]" placeholder="Event Location" id="event-loc"  class="form-control" name="location">
 	</div>
-	
+
 	<div class="form-group">
 		<label class="control-label">Speakers Names: <i id="addSpeaker" class="fa fa-plus btn btn-success"></i></label>
 		<div class="speakers">
