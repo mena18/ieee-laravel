@@ -11,32 +11,32 @@
 		<div class="container">
 			<div class="section-content contact-content clearfix">
 				<h3>Send us a Message</h3>
-				<form>
+				<form action="{{route('about.sendMessage')}}" method="POST">
 					<input type="hidden" name="_token" id="token" value="{{ csrf_token() }}">
 					<div class="row">
 						<div class="form-group col-sm-6">
 							<label>Full Name</label>
-							<input type="text" id="name" class="form-control" placeholder="">
+							<input name="name" type="text" id="name" class="form-control" placeholder="">
 						</div>
 						<div class="form-group col-sm-6">
 							<label>Phone Number</label>
-							<input type="text" id="mobile" class="form-control" placeholder="">
+							<input name="mobile" type="text" id="mobile" class="form-control" placeholder="">
 						</div>
 
 					</div>
 					<div class="row">
 						<div class="form-group col-sm-12">
 							<label>Email</label>
-							<input type="email" id="email" class="form-control" placeholder="">
+							<input  name="email" type="email" id="email" class="form-control" placeholder="">
 						</div>
 					</div>
 					<div class="row">
 						<div class="form-group col-sm-12">
 							<label>Message</label>
-							<textarea id="content"></textarea>
+							<textarea  name="message" id="content"></textarea>
 						</div>
 					</div>
-					<input class="hvr-push" type="submit" data-url="{{URL::to('about/contact')}}" value="Send" id="sendMessage">
+					<input class="hvr-push" type="submit" data-url="{{route('about.sendMessage')}}" value="Send" id="sendMessage">
 				</form>
 				<div id="errors" class="hidden" style="margin-top: 90px;">
 					<ul class="alert alert-danger"></ul>
@@ -56,13 +56,12 @@
 					</li>
 					<li>
 						<i class="fa fa-phone" aria-hidden="true"></i>
-						<a href="tel:01061396963">01061396963 - </a>
-						<a href="tel:01141722689">01141722689 - </a>
-						<a href="tel:01222474955">01222474955</a>
+						<a href="tel:01004795400">01004795400 - </a>
+						<a href="tel:01154796792">01154796792  </a>
 					</li>
 					<li>
 						<i class="fa fa-envelope-o" aria-hidden="true"></i>
-						<a href="email:contact@ieeepuasb.org">contact@ieeepuasb.org</a>
+						<a href="email:ِAhmedhelmy@ieee.org">ِAhmedhelmy@ieee.org</a>
 					</li>
 				</ul>
 			</div>

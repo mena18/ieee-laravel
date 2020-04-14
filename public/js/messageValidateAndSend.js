@@ -4,13 +4,13 @@ $("#sendMessage").on("click",function (e) {
     var url = $(this).data("url");
     console.log(url);
 
-    var namePatt = new RegExp("[^a-zA-Z ]");
+    var namePatt = new RegExp("^[a-zA-Z ]+$");
 
     var emailPatt = new RegExp("^[_A-Za-z0-9]+((.|-|_)[A-Za-z0-9]+)?@[A-Za-z0-9]+((.[A-Za-z]{2,})|(.[A-Za-z]{2,}.[A-Za-z]{2,}))$");
 
-    var digitPatt = new RegExp("[^0-9]");
+    var digitPatt = new RegExp("^[0-9]+$");
 
-    var messagePatt = new RegExp("[^0-9a-zA-Z:,. ]");
+    var messagePatt = new RegExp("^[0-9a-zA-Z:,.' ]+$");
 
 
     var name = $("#name").val();
@@ -18,27 +18,34 @@ $("#sendMessage").on("click",function (e) {
     var mobile = $("#mobile").val();
     var message = $("#content").val();
 
-    if(namePatt.test(name) || name === "" || name.length < 4) {
+
+    console.log(namePatt.test(name));
+    console.log(emailPatt.test(email));
+    console.log(digitPatt.test(mobile));
+    console.log(messagePatt.test(message));
+
+    if(!namePatt.test(name) || name === "" || name.length < 4) {
         $("#name").addClass("contactMessageError");
     } else {
         $("#name").removeClass("contactMessageError");
     }
-    if(digitPatt.test(mobile) || mobile === "" || mobile.length !== 11) {
+    if(!digitPatt.test(mobile) || mobile === "" || mobile.length !== 11) {
         $("#mobile").addClass("contactMessageError");
     } else {
         $("#mobile").removeClass("contactMessageError");
     }
-    if(emailPatt.test(email) && email !== "") {
-        $("#email").removeClass("contactMessageError");
-    } else {
+    if(!emailPatt.test(email) || email === "") {
         $("#email").addClass("contactMessageError");
+    } else {
+        $("#email").removeClass("contactMessageError");
     }
-    if(messagePatt.test(message) || message === "" || message.length < 5) {
+    if(!messagePatt.test(message) || message === "" || message.length < 5) {
         $("#content").addClass("contactMessageError");
     } else {
         $("#content").removeClass("contactMessageError");
     }
-    console.log($(".contactMessageError").length);
+
+    console.log($(".contactMessageError").length)
 
     if($(".contactMessageError").length == 0) {
         $.ajax({
@@ -49,7 +56,7 @@ $("#sendMessage").on("click",function (e) {
                 "name" : name,
                 "email" : email,
                 "mobile" : mobile,
-                "content": message
+                "message": message
             },
             success: function (data) {
                 $("#name").val("");

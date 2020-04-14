@@ -25,14 +25,14 @@ class MessagesController extends Controller
             'name'=>'required|max:50',
             'email'=>'required|email|max:255',
             'mobile'=>'required|max:11|min:11',
-            'content'=>'required'
+            'message'=>'required'
         ]);
 
         $message = new Message();
         $message->name = $request['name'];
         $message->email = $request['email'];
         $message->mobile = $request['mobile'];
-        $message->content = $request['content'];
+        $message->message = $request['message'];
         $message->save();
 
         return redirect()->route('about.contact')->with('success', 'we are happy to receive your message, we will answer soon');

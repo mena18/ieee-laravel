@@ -49,7 +49,7 @@ Route::prefix('courses')->group(function (){
 Route::prefix('about')->group(function (){
 	Route::get('/', 'AboutController@index')->name('about.index');
 	Route::get('/contact', 'AboutController@contact')->name('about.contact');
-  Route::post('/contact', 'MessagesController@store');
+  Route::post('/contact', 'MessagesController@store')->name('about.sendMessage');
 	Route::get('/committees', 'AboutController@committees')->name('about.committees');
 	Route::get('/benefits','AboutController@benefits')->name('about.benefits');
 

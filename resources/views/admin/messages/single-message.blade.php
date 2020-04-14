@@ -7,6 +7,6 @@
         <h3>Email: {{$message->email}}</h3>
         <br><br>
         <h4>Message: </h4>
-        <p>{{$message->content}}</p>
+        <p>{{$message->message}}</p>
     </div>
 @endsection

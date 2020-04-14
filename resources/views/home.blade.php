@@ -78,7 +78,7 @@
             <div class="row">
                 <div class="section-content">
                     <div class="col-sm-3">
-                        <h3 class="home-count">2013</h3>
+                        <h3 class="home-count">2014</h3>
                         <p>Year Founded</p>
                     </div>
                     <div class="col-sm-3">
