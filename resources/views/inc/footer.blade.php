@@ -75,7 +75,7 @@
 	<div class="footer-copyright">
 		<div class="container">
 			<div class="row">
-				<p>Copyrights &copy; IEEE PUA SB | Web Development Committee 2018</p>
+				<p>Copyrights &copy; IEEE PUA SB | Web Development Committee 2020</p>
 			</div>
 		</div>
 	</div>
