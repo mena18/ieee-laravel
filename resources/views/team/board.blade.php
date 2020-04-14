@@ -33,12 +33,12 @@
 
 				<div class="social " style="margin-right: 0 ">
 					<div class="facebook ">
-						<a href="" target="_blank ">
+						<a href="https://www.facebook.com/Eng.ahmedhelmy98" target="_blank ">
 							<i class="fa fa-facebook " aria-hidden="true "></i>
 						</a>
 					</div>
 					<div class="linkedin ">
-						<a href="#" target="_blank ">
+						<a href="https://www.linkedin.com/in/ahmed11198/" target="_blank ">
 							<i class="fa fa-linkedin-square " aria-hidden="true "></i>
 						</a>
 					</div>
@@ -50,12 +50,12 @@
 
 				<div class="social " style="margin-right: 0 ">
 					<div class="facebook ">
-						<a href="" target="_blank ">
+						<a href="https://www.facebook.com/MuhannadMoussa?fref=gc&dti=723568194436921" target="_blank ">
 							<i class="fa fa-facebook " aria-hidden="true "></i>
 						</a>
 					</div>
 					<div class="linkedin ">
-						<a href="#" target="_blank ">
+						<a href="https://www.linkedin.com/in/muhannad-moussa-79bb12162/" target="_blank ">
 							<i class="fa fa-linkedin-square " aria-hidden="true "></i>
 						</a>
 					</div>
@@ -67,12 +67,12 @@
 
 				<div class="social " style="margin-right: 0 ">
 					<div class="facebook ">
-						<a href="" target="_blank ">
+						<a href="https://www.facebook.com/khaled.a.farag.9" target="_blank ">
 							<i class="fa fa-facebook " aria-hidden="true "></i>
 						</a>
 					</div>
 					<div class="linkedin ">
-						<a href="#" target="_blank ">
+						<a href="https://www.linkedin.com/in/khaled-abdelhalim-farag-7264bb191/" target="_blank ">
 							<i class="fa fa-linkedin-square " aria-hidden="true "></i>
 						</a>
 					</div>
@@ -85,12 +85,12 @@
 
 				<div class="social " style="margin-right: 0 ">
 					<div class="facebook ">
-						<a href="" target="_blank ">
+						<a href="https://www.facebook.com/rawans19" target="_blank ">
 							<i class="fa fa-facebook " aria-hidden="true "></i>
 						</a>
 					</div>
 					<div class="linkedin ">
-						<a href="#" target="_blank ">
+						<a href="https://www.linkedin.com/in/rawan-elnagar-a85424169/" target="_blank ">
 							<i class="fa fa-linkedin-square " aria-hidden="true "></i>
 						</a>
 					</div>
@@ -138,12 +138,12 @@
 
 				<div class="social " style="margin-right: 0 ">
 					<div class="facebook ">
-						<a href="#" target="_blank ">
+						<a href="https://www.facebook.com/ayman.mohamed.121398" target="_blank ">
 							<i class="fa fa-facebook " aria-hidden="true "></i>
 						</a>
 					</div>
 					<div class="linkedin ">
-						<a href="#" target="_blank ">
+						<a href="https://www.linkedin.com/in/ayman-mohamed-196bbb14a/" target="_blank ">
 							<i class="fa fa-linkedin-square " aria-hidden="true "></i>
 						</a>
 					</div>
@@ -154,12 +154,12 @@
 
 				<div class="social " style="margin-right: 0 ">
 					<div class="facebook ">
-						<a href="#" target="_blank ">
+						<a href="https://www.facebook.com/Eng.ahmedhelmy98" target="_blank ">
 							<i class="fa fa-facebook " aria-hidden="true "></i>
 						</a>
 					</div>
 					<div class="linkedin ">
-						<a href="#" target="_blank ">
+						<a href="https://www.linkedin.com/in/ahmed11198/" target="_blank ">
 							<i class="fa fa-linkedin-square " aria-hidden="true "></i>
 						</a>
 					</div>
