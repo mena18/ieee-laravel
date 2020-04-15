@@ -5,15 +5,20 @@
 	<p><?php echo e($volunteer->committee); ?></p>
 
 	<div class="socialOfVol" style="margin-right: 0">
+		<?php if(strlen($volunteer->facebook)>3): ?>
 		<div class="facebook">
 			<a href="<?php echo e($volunteer->facebook); ?>" target="_blank">
 				<i class="fa fa-facebook" aria-hidden="true"></i>
 			</a>
 		</div>
+		<?php endif; ?>
+
+		<?php if(strlen($volunteer->linkedin)>3): ?>
 		<div class="linkedin">
 			<a href="<?php echo e($volunteer->linkedin); ?>" target="_blank">
 				<i class="fa fa-linkedin-square" aria-hidden="true"></i>
 			</a>
 		</div>
+		<?php endif; ?>
 	</div>
 </div>

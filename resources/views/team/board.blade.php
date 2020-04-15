@@ -149,6 +149,7 @@
 					</div>
 				</div>
 			</div>
+
 			<div class="col-xs-6 col-md-3 col-lg-3 member ">
 				<img class="image " src="{{URL::to('')}}/images/board/Board-2018-2019/Ahmed-Helmy.jpg" alt="Ahmed Helmy" title="Ahmed Helmy">
 
@@ -161,6 +162,19 @@
 					<div class="linkedin ">
 						<a href="https://www.linkedin.com/in/ahmed11198/" target="_blank ">
 							<i class="fa fa-linkedin-square " aria-hidden="true "></i>
+						</a>
+					</div>
+				</div>
+			</div>
+
+
+			<div class="col-xs-6 col-md-3 col-lg-3 member ">
+				<img class="image " src="{{URL::to('')}}/images/board/Board-2018-2019/Hadeer.jpg" alt="Hadeer Samy" title="Hadeer Samy">
+
+				<div class="social " style="margin-right: 0 ">
+					<div class="facebook ">
+						<a href="https://www.facebook.com/hadeer.samy.5621" target="_blank ">
+							<i class="fa fa-facebook " aria-hidden="true "></i>
 						</a>
 					</div>
 				</div>

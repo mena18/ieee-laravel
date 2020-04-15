@@ -5,15 +5,20 @@
 	<p>{{$volunteer->committee}}</p>
 
 	<div class="socialOfVol" style="margin-right: 0">
+		@if (strlen($volunteer->facebook)>3)
 		<div class="facebook">
 			<a href="{{$volunteer->facebook}}" target="_blank">
 				<i class="fa fa-facebook" aria-hidden="true"></i>
 			</a>
 		</div>
+		@endif
+
+		@if (strlen($volunteer->linkedin)>3)
 		<div class="linkedin">
 			<a href="{{$volunteer->linkedin}}" target="_blank">
 				<i class="fa fa-linkedin-square" aria-hidden="true"></i>
 			</a>
 		</div>
+		@endif
 	</div>
 </div>
