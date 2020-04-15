@@ -8,16 +8,20 @@
 	<p><?php echo e($event->location); ?> | <span><?php echo e(date('M d, Y', strtotime($event->date))); ?></span></p>
 <?php $__env->stopSection(); ?>
 <?php
-$speakersNames = explode(',', $event->speakers);
-$speakersImages = explode(',', $event->speakers_images);
-$speakers = [];
-$i = 0;
-foreach($speakersNames as $speaker) {
-	$speakers[] = [
-		'name'  => $speaker,
-		'image' => $speakersImages[$i]
-	];
-	$i++;
+if($event->speakers){
+	$speakersNames = explode(',', $event->speakers);
+	$speakersImages = explode(',', $event->speakers_images);
+	$speakers = [];
+	$i = 0;
+	foreach($speakersNames as $speaker) {
+		$speakers[] = [
+			'name'  => $speaker,
+			'image' => $speakersImages[$i]
+		];
+		$i++;
+	}
+}else{
+	$speakers = [];
 }
 ?>
 <?php $__env->startSection('content'); ?>
@@ -48,8 +52,8 @@ foreach($speakersNames as $speaker) {
 				<?php endif; ?>
 			</div>
 			<div class="events-single-speakers col-md-4">
-				<h3>SPEAKERS</h3>
 				<?php if(count($speakers) > 0): ?>
+				<h3>SPEAKERS</h3>
 					<?php $__currentLoopData = $speakers; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $speaker): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
 					<div class="speaker-item">
 						<div class="col-sm-3">
@@ -62,12 +66,7 @@ foreach($speakersNames as $speaker) {
 						</div>
 					</div>
 					<?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
-				<?php else: ?>
-				<div class="speaker-item">
-					<div class="alert alert-info">
-						No Speakers Added.
-					</div>
-				</div>
+
 				<?php endif; ?>
 			</div>
 			<div class="events-single-location col-md-4">
