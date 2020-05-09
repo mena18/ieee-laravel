@@ -11,7 +11,7 @@
   <section class="magazines">
     <div class="container">
       <div class="magazine-preview">
-        <iframe width="800px" height="700px" src="{{$magazine->url}}" frameborder="0" allowfullscreen allowtransparency></iframe>
+        <iframe sandbox="allow-scripts" width="800px" height="700px" src="{{$magazine->url}}" frameborder="0" allowfullscreen allowtransparency></iframe>
       </div>
 
     </div>

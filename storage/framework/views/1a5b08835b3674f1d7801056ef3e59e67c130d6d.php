@@ -30,7 +30,7 @@
 							<ul class="dropdown-menu">
 								<li class="<?php echo e($active==='events'?'active':''); ?>"><a href="<?php echo e(route('events.all')); ?>">Events</a></li>
 								<li class="<?php echo e($active==='mega'?'active':''); ?>"><a href="<?php echo e(route('mega.all')); ?>">Mega Events</a></li>
-
+								<li class="<?php echo e($active==='magazine'?'active':''); ?>"><a href="<?php echo e(route('magazine.index')); ?>">Magazines</a></li>
 								<li class="<?php echo e($active==='news'?'active':''); ?>"><a href="<?php echo e(route('news.all')); ?>">News</a></li>
 								<li class="<?php echo e($active==='schedule'?'active':''); ?>"><a href="<?php echo e(route('schedule')); ?>">Schedule</a></li>
 							</ul>

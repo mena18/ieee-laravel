@@ -21,7 +21,7 @@
 			
 		      <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
 			<?php else: ?>
-				<div class="magazine">
+				<div>
 					<h1>Coming Soon</h1>
 				</div>
 			<?php endif; ?>
