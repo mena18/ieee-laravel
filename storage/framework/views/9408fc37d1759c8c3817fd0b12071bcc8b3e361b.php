@@ -18,7 +18,8 @@
 		          <h2><?php echo e($magazine->name); ?></h2>
 		        </a>
 		      </div>
-				<?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+			
+		      <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
 			<?php else: ?>
 				<div>
 					<h1>Coming Soon</h1>
