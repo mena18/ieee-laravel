@@ -4,10 +4,10 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>{{$certificate->name}}</title>
-	<link rel="stylesheet" href="{{URL::to('css/certificateFonts.css')}}">
-	<link rel="stylesheet" href="{{URL::to('css/bootstrap.min.css')}}">
-	<link rel="stylesheet" href="{{URL::to('css/font-awesome.min.css')}}">
+	<title><?php echo e($certificate->name); ?></title>
+	<link rel="stylesheet" href="<?php echo e(URL::to('css/certificateFonts.css')); ?>">
+	<link rel="stylesheet" href="<?php echo e(URL::to('css/bootstrap.min.css')); ?>">
+	<link rel="stylesheet" href="<?php echo e(URL::to('css/font-awesome.min.css')); ?>">
 	<?php $path = URL::to('images/new_certificate.jpg') ?>
 	<style>
 	    .certification{
@@ -52,18 +52,18 @@
 </head>
 <body>
 <section class="certification col-xs-12">
-	<div class="attendeeName"><p >{{$certificate->name}}</p></div>
-	<p class="courseName">{{$certificate->course->name}}</p>
-	<p class="hoursOfCourse">{{$certificate->course->hours}}</p>
-	<!-- <img src="{{URL::to('images/signature.png')}}" alt="counselor signature" class="signature"> -->
+	<div class="attendeeName"><p ><?php echo e($certificate->name); ?></p></div>
+	<p class="courseName"><?php echo e($certificate->course->name); ?></p>
+	<p class="hoursOfCourse"><?php echo e($certificate->course->hours); ?></p>
+	<!-- <img src="<?php echo e(URL::to('images/signature.png')); ?>" alt="counselor signature" class="signature"> -->
 </section>
 <a id="certificate" download>
 	<div class="btn btn-primary">Download</div>
 </a>
-<script src="{{URL::to('js/jquery-3.2.0.min.js')}}"></script>
-<script src="{{URL::to('js/bootstrap.min.js')}}"></script>
-<script src="{{URL::to('js/certificate.js')}}"></script>
-<script src="{{URL::to('js/html2canvas.js')}}"></script>
+<script src="<?php echo e(URL::to('js/jquery-3.2.0.min.js')); ?>"></script>
+<script src="<?php echo e(URL::to('js/bootstrap.min.js')); ?>"></script>
+<script src="<?php echo e(URL::to('js/certificate.js')); ?>"></script>
+<script src="<?php echo e(URL::to('js/html2canvas.js')); ?>"></script>
 <script>
 window.onload = function(){
 	html2canvas(document.querySelector(".certification")).then(canvas => {
