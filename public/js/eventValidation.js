@@ -6,7 +6,7 @@ $(document).ready(function () {
 
     var digitPatt = new RegExp("[^0-9]");
 
-    var facebookPatt = new RegExp("http(?:s):\\/\\/(?:www\\.)facebook\\.com\\/.+");
+    // var facebookPatt = new RegExp("http(?:s):\\/\\/(?:www\\.)facebook\\.com\\/.+");
 
     $("#eventReg").on('click', function(event) {
         var name = $("#name").val();
@@ -14,12 +14,12 @@ $(document).ready(function () {
         var semester = $("#Semester").val();
         var email = $("#email").val();
         var mobile = $("#Mobile").val();
-        var facebook = $("#facebook").val();
-        var fbCheck = facebook.substring(0, 8);
-        if(fbCheck !== "https://") {
-            facebook = "https://" + facebook;
-            $("#facebook").val(facebook);
-        }
+        // var facebook = $("#facebook").val();
+        // var fbCheck = facebook.substring(0, 8);
+        // if(fbCheck !== "https://") {
+        //     facebook = "https://" + facebook;
+        //     $("#facebook").val(facebook);
+        // }
         if(nameUniversityPatt.test(name) || name === "" || name.length < 4) {
             $("#name").addClass("error");
             event.preventDefault();
@@ -38,12 +38,12 @@ $(document).ready(function () {
         } else {
             $("#Mobile").removeClass("error");
         }
-        if(!facebookPatt.test(facebook) || facebook === "") {
-            $("#facebook").addClass("error");
-            event.preventDefault();
-        } else {
-            $("#facebook").removeClass("error");
-        }
+        // if(!facebookPatt.test(facebook) || facebook === "") {
+        //     $("#facebook").addClass("error");
+        //     event.preventDefault();
+        // } else {
+        //     $("#facebook").removeClass("error");
+        // }
         if(nameUniversityPatt.test(faculty) || faculty === "" || faculty.length < 4) {
             $("#Faculty").addClass("error");
             event.preventDefault();

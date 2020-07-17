@@ -49,7 +49,7 @@ class EventController extends Controller{
                 'Faculty'=>'required',
                 'semester'=>'required',
                 'mail'=>'required|email',
-                'profile'=>'required',
+                'profile'=>'',
                 'mobile'=>'required|max:11',
                 'member'=>'required',
         ]);
@@ -65,7 +65,11 @@ class EventController extends Controller{
 		$attendee->faculty = $request->Faculty;
 		$attendee->semester = $request->semester;
 		$attendee->email = $request->mail;
-		$attendee->facebook_profile = $request->profile;
+		if($request->profile){
+			$attendee->facebook_profile = $request->profile;
+		}else{
+			$attendee->facebook_profile = "";
+		}
 		$attendee->mobile = $request->mobile;
 		$attendee->membership_type = $request->member;
 		$attendee->event_id = $id;
