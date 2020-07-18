@@ -65,6 +65,9 @@ class EventController extends Controller{
 		$attendee->faculty = $request->Faculty;
 		$attendee->semester = $request->semester;
 		$attendee->email = $request->mail;
+		if(! str_contains($request->mail, '@pua.edu.eg')){
+			return redirect('/events/event/'.$id)->with("error","must be pua Email");
+		}
 		if($request->profile){
 			$attendee->facebook_profile = $request->profile;
 		}else{
