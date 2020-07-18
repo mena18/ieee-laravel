@@ -48,11 +48,11 @@ Register Attendance
 
 									<div class="um-field um-field-last_name um-field-text" data-key="last_name">
 										<div class="um-field-label">
-											<label for="last_name-2881">Academic Semester</label>
+											<label for="last_name-2881">Academic Semester </label>
 											<div class="um-clear"></div>
 										</div>
 										<div class="um-field-area">
-											<input autocomplete="off" class="um-form-field valid " type="text" name="semester" id="Semester" value="<?php echo e(old('semester')); ?>"/>
+											<input placeholder="Ex : 6" autocomplete="off" class="um-form-field valid " type="text" name="semester" id="Semester" value="<?php echo e(old('semester')); ?>"/>
 										</div>
 									</div>
 
@@ -65,7 +65,7 @@ Register Attendance
 											<input autocomplete="off" class="um-form-field valid " type="text" name="mail" id="email" value="<?php echo e(old('mail')); ?>"/>
 										</div>
 									</div>
-									<div class="um-field um-field-user_email um-field-text" data-key="user_email">
+									<!-- <div class="um-field um-field-user_email um-field-text" data-key="user_email">
 										<div class="um-field-label">
 											<label for="user_mobile-2881">Your Facebook Link</label>
 											<div class="um-clear"></div>
@@ -73,7 +73,7 @@ Register Attendance
 										<div class="um-field-area">
 											<input autocomplete="off" class="um-form-field valid " type="text" name="profile" id="facebook" value="<?php echo e(old('profile')); ?>" placeholder="" data-validate="membership-id" data-key="user_membership-id" required min="0" max="" />
 										</div>
-									</div>
+									</div> -->
 									<div class="um-field um-field-user_email um-field-text" data-key="user_email">
 										<div class="um-field-label">
 											<label for="user_email-2881">Mobile Number</label>
@@ -110,4 +110,5 @@ Register Attendance
 		</div>
 	</section>
 	<?php $__env->stopSection(); ?>
+
 <?php echo $__env->make('layout.body',['active'=>'events','headerClass'=>'events-hero'], array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
