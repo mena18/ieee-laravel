@@ -6,6 +6,10 @@ Register Attendance
 		.error {
 			border-color: #d9534f !important;
 		}
+		.error-text{
+			color:red;
+
+		}
 	</style>
 	<section class="sign-up-form">
 		<div class="container">
@@ -29,6 +33,7 @@ Register Attendance
 											<div class="um-clear">
 											</div>
 										</div>
+										<span class="error-text" id="name-error"></span>
 										<div class="um-field-area">
 											<input autocomplete="off" class="um-form-field valid " type="text" name="name" id="name" value="<?php echo e(old('name')); ?>"/>
 										</div>
@@ -41,6 +46,7 @@ Register Attendance
 											<div class="um-clear">
 											</div>
 										</div>
+										<span class="error-text" id="Faculty-error"></span>
 										<div class="um-field-area">
 											<input autocomplete="off" class="um-form-field valid " type="text" name="Faculty" id="Faculty" value="<?php echo e(old('Faculty')); ?>"/>
 										</div>
@@ -51,6 +57,7 @@ Register Attendance
 											<label for="last_name-2881">Academic Semester </label>
 											<div class="um-clear"></div>
 										</div>
+										<span class="error-text" id="semester-error"></span>
 										<div class="um-field-area">
 											<input placeholder="Ex : 6" autocomplete="off" class="um-form-field valid " type="text" name="semester" id="Semester" value="<?php echo e(old('semester')); ?>"/>
 										</div>
@@ -58,9 +65,10 @@ Register Attendance
 
 									<div class="um-field um-field-user_email um-field-text" data-key="user_email">
 										<div class="um-field-label">
-											<label for="user_email-2881">E-mail Address</label>
+											<label for="user_email-2881">E-mail Address (PUA Email)</label>
 											<div class="um-clear"></div>
 										</div>
+										<span class="error-text" id="email-error"></span>
 										<div class="um-field-area">
 											<input autocomplete="off" class="um-form-field valid " type="text" name="mail" id="email" value="<?php echo e(old('mail')); ?>"/>
 										</div>
@@ -79,6 +87,7 @@ Register Attendance
 											<label for="user_email-2881">Mobile Number</label>
 											<div class="um-clear"></div>
 										</div>
+										<span class="error-text" id="Mobile-error"></span>
 										<div class="um-field-area">
 											<input autocomplete="off" class="um-form-field valid " type="text" name="mobile" id="Mobile" value="<?php echo e(old('mobile')); ?>"/>
 										</div>
